@@ -1,0 +1,26 @@
+{
+  "index.qmd": {
+    "index.html": "75a18e84"
+  },
+  "about.qmd": {
+    "about.html": "9e849086"
+  },
+  "skills.qmd": {
+    "skills.html": "ce3607a8"
+  },
+  "cv.qmd": {
+    "cv.html": "53c03ce2"
+  },
+  "projects.qmd": {
+    "projects.html": "50bcbd14"
+  },
+  "publications.qmd": {
+    "publications.html": "462f79a8"
+  },
+  "projects/chroococcidiopsis-wgs/index.qmd": {
+    "index.html": "ecbe26d8"
+  },
+  "projects/sacco-lab/index.qmd": {
+    "index.html": "84ff4667"
+  }
+}

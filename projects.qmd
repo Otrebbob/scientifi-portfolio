@@ -1,0 +1,36 @@
+---
+title: "Projects"
+---
+
+# Scientific & Bioinformatics Projects
+
+This section contains independent analyses and reproducible workflows based on publicly available scientific datasets.
+
+## Current projects
+
+### Reanalysis of public Illumina data from *Chroococcidiopsis*-associated samples
+
+Publicly available sequencing data retrieved from NCBI SRA were used to develop and document a microbial genomics workflow including:
+
+- raw read quality control
+- taxonomic profiling
+- adapter and quality trimming
+- de novo assembly
+- assembly quality assessment
+- read mapping
+- downstream genomic analysis
+- construction of a final pipeline
+
+**Data source:** Public dataset from NCBI Sequence Read Archive.
+
+**My contribution:** Bioinformatic analysis, workflow design, interpretation and documentation.
+
+[View full project →](projects/chroococcidiopsis-wgs/index.qmd)
+
+### Reproducible Genomic Characterization of a Lactic Acid Bacterium
+
+Independent bioinformatics project focused on the genomic characterization of a lactic acid bacterium relevant to food biotechnology and probiotic applications.
+
+The project includes raw-read quality control, preprocessing, taxonomic assessment, de novo assembly, genome-quality evaluation, annotation, safety and functional screening, and comparative genomics within a reproducible Snakemake workflow.
+
+[View full project →](projects/sacco-lab/index.qmd)

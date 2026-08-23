@@ -1,0 +1,32 @@
+---
+title: "Roberto De Carolis | PhD "
+---
+# Microbiology, Bioinformatic & Astrobiology
+
+PhD biologist with experience in Microbiology, extremophiles, Fungi, micro algae, cyanobacteria and lichens, Antarctic research and microbial genomics.
+
+## Research Interests
+
+- Microbial genomics
+- Bioinformatic
+- Astrobiology
+- Extremophiles
+- Cyanobacteria
+- Environmental Biology
+- Ecology 
+
+## Portfolio
+
+This website collects my scientific projects, pubblication, bioinformatic analyses and my observation
+
+### Current project
+
+**Reanalysis of public Illumina data from Chroococcidiopsis-associated samples**
+
+Publicly available sequencing data retrieved from NCBI SRA were used to build and document a complete microbial genomics workflow, from raw-read quality control to taxonomic profiling, assembly and downstream analysis and finally pipeline construction.
+
+
+
+This is a Quarto website.
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
