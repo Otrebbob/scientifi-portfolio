@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>index – Roberto De Carolis | Microbiology &amp; Bioinformatic</title>
+<title>Comparative Genomics and Functional Characterization of Lactiplantibacillus plantarum E2C2 – Roberto De Carolis | Microbiology &amp; Bioinformatic</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -217,24 +236,33 @@ ul.task-list li input[type="checkbox"] {
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Comparative Genomics and Functional Characterization of Lactiplantibacillus plantarum E2C2</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<table class="caption-top table">
-<tbody>
-<tr class="odd">
-<td>title: “Sacco Lab Analysis”</td>
-</tr>
-</tbody>
-</table>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
 <section id="project-overview" class="level2">
 <h2 class="anchored" data-anchor-id="project-overview">Project overview</h2>
 <p>This project presents an independent, reproducible genomic characterization of <em>Lactiplantibacillus plantarum</em> E2C2 using publicly available Illumina whole-genome sequencing data.</p>
 <p>The analysis integrates read quality control, taxonomic assessment, de novo genome assembly, genome-quality evaluation, chromosome and plasmid reconstruction, species confirmation, functional annotation, genomic safety screening and comparative genomics.</p>
 <p>Particular attention was given to traits relevant to food biotechnology and potential probiotic applications, including bacteriocin-associated loci, stress-response systems, carbohydrate utilization, adhesion-associated proteins, exopolysaccharide biosynthesis and fermentation-related metabolic functions.</p>
-<p>The complete analysis was implemented as a modular <strong>Snakemake workflow</strong> using isolated Conda environments to support reproducibility and dependency management.</p>
+<p>The complete analysis was implemented as a modular <strong>Snakemake workflow</strong> <span class="citation" data-cites="koster2012snakemake">(<a href="#ref-koster2012snakemake" role="doc-biblioref">Köster and Rahmann 2012</a>)</span> using isolated Conda environments to support reproducibility and dependency management.</p>
 </section>
 <section id="project-objectives" class="level2">
 <h2 class="anchored" data-anchor-id="project-objectives">Project objectives</h2>
@@ -267,7 +295,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="read-preprocessing-and-quality-filtering" class="level2">
 <h2 class="anchored" data-anchor-id="read-preprocessing-and-quality-filtering">Read preprocessing and quality filtering</h2>
-<p>Raw Illumina paired-end reads were processed using <strong>fastp 1.3.6</strong>, followed by quality assessment using <strong>FastQC 0.12.1</strong> and aggregation of the final reports with <strong>MultiQC</strong>.</p>
+<p>Raw Illumina paired-end reads were processed using <strong>fastp 1.3.6</strong> <span class="citation" data-cites="chen2018fastp">(<a href="#ref-chen2018fastp" role="doc-biblioref">Chen et al. 2018</a>)</span>, followed by quality assessment using <strong>FastQC 0.12.1</strong> <span class="citation" data-cites="andrewsFastQC">(<a href="#ref-andrewsFastQC" role="doc-biblioref">Andrews, n.d.</a>)</span> and aggregation of the final reports with <strong>MultiQC</strong> <span class="citation" data-cites="ewels2016multiqc">(<a href="#ref-ewels2016multiqc" role="doc-biblioref">Ewels et al. 2016</a>)</span>.</p>
 <section id="raw-sequencing-data" class="level3">
 <h3 class="anchored" data-anchor-id="raw-sequencing-data">Raw sequencing data</h3>
 <p>Before filtering, the dataset contained:</p>
@@ -406,7 +434,7 @@ E2C2_R2.fastq.gz</code></pre>
 <p>The raw sequencing data and the original experimental work were not generated as part of this portfolio project. My contribution consists of the independent computational reanalysis, workflow development, genomic characterization, interpretation and documentation of the publicly available dataset.</p>
 <section id="original-publication" class="level3">
 <h3 class="anchored" data-anchor-id="original-publication">Original publication</h3>
-<p>The E2C2 strain was previously described in:</p>
+<p>The E2C2 strain was originally described by Suryavanshi et al. <span class="citation" data-cites="suryavanshi2017e2c2">(<a href="#ref-suryavanshi2017e2c2" role="doc-biblioref">Suryavanshi et al. 2017</a>)</span>.</p>
 <p><strong>Suryavanshi MV, Paul D, Doijad SP, Bhute SS, Hingamire TB, Gune RP, et al.</strong><br>
 <em>Draft genome sequence of Lactobacillus plantarum strains E2C2 and E2C5 isolated from human stool culture.</em><br>
 Standards in Genomic Sciences, 2017.</p>
@@ -416,7 +444,7 @@ Standards in Genomic Sciences, 2017.</p>
 </section>
 <section id="taxonomic-assessment" class="level2">
 <h2 class="anchored" data-anchor-id="taxonomic-assessment">Taxonomic assessment</h2>
-<p>Taxonomic classification of the quality-filtered sequencing reads was performed using <strong>Kraken2</strong> to evaluate whether the dataset was consistent with the expected taxonomic identity of the E2C2 strain and to identify potential evidence of contamination.</p>
+<p>Taxonomic classification of the quality-filtered sequencing reads was performed using <strong>Kraken2</strong> <span class="citation" data-cites="wood2019kraken2">(<a href="#ref-wood2019kraken2" role="doc-biblioref">Wood et al. 2019</a>)</span> to evaluate whether the dataset was consistent with the expected taxonomic identity of the E2C2 strain and to identify potential evidence of contamination.</p>
 <section id="kraken2-results" class="level3">
 <h3 class="anchored" data-anchor-id="kraken2-results">Kraken2 results</h3>
 <p>The main taxonomic assignments were:</p>
@@ -441,11 +469,11 @@ Standards in Genomic Sciences, 2017.</p>
 </section>
 <section id="de-novo-genome-assembly-and-quality-assessment" class="level2">
 <h2 class="anchored" data-anchor-id="de-novo-genome-assembly-and-quality-assessment">De novo genome assembly and quality assessment</h2>
-<p>The quality-filtered paired-end reads were assembled de novo using <strong>SPAdes 3.15.5</strong> in careful mode.</p>
+<p>The quality-filtered paired-end reads were assembled de novo using <strong>SPAdes 3.15.5</strong> <span class="citation" data-cites="bankevich2012spades">(<a href="#ref-bankevich2012spades" role="doc-biblioref">Bankevich et al. 2012</a>)</span> in careful mode.</p>
 <p>The assembly was generated using automatic k-mer selection, 4 CPU threads and an 8 GB memory limit.</p>
 <section id="assembly-statistics" class="level3">
 <h3 class="anchored" data-anchor-id="assembly-statistics">Assembly statistics</h3>
-<p>Assembly quality was assessed using <strong>QUAST 5.3.0</strong>.</p>
+<p>Assembly quality was assessed using <strong>QUAST 5.3.0</strong> <span class="citation" data-cites="gurevich2013quast">(<a href="#ref-gurevich2013quast" role="doc-biblioref">Gurevich et al. 2013</a>)</span>.</p>
 <p>The main assembly metrics were:</p>
 <table class="caption-top table">
 <thead>
@@ -539,7 +567,7 @@ Standards in Genomic Sciences, 2017.</p>
 <h3 class="anchored" data-anchor-id="assembly-quality-interpretation">Assembly-quality interpretation</h3>
 <p>The independently reconstructed E2C2 genome showed a high degree of continuity, with an <strong>N50 of approximately 272 kb</strong> and only five contigs required to account for half of the assembled sequence.</p>
 <p>The reconstructed genome size of approximately <strong>3.8 Mb</strong> and the <strong>43.99% GC content</strong> were highly consistent with the previously published E2C2 draft genome, which was reported to be approximately 3.60 Mb with a GC content of 43.99%.</p>
-<p>CheckM2 estimated the genome to be essentially complete, although the <strong>4.77% contamination estimate</strong> indicates that the assembly should not be interpreted as completely free of potentially redundant or taxonomically discordant sequence.</p>
+<p><strong>CheckM2</strong> <span class="citation" data-cites="chklovski2023checkm2">(<a href="#ref-chklovski2023checkm2" role="doc-biblioref">Chklovski et al. 2023</a>)</span> estimated the genome to be essentially complete…</p>
 <p>This result motivated additional genome-level taxonomic assessment and inspection of chromosomal and plasmid-associated sequences in subsequent stages of the analysis.</p>
 </section>
 </section>
@@ -646,7 +674,7 @@ Standards in Genomic Sciences, 2017.</p>
 </section>
 <section id="plasmid-reconstruction-and-mobile-elements" class="level2">
 <h2 class="anchored" data-anchor-id="plasmid-reconstruction-and-mobile-elements">Plasmid reconstruction and mobile elements</h2>
-<p>The de novo assembly was further analysed using <strong>MOB-suite</strong> to distinguish chromosome-associated contigs from putative plasmid-associated sequences.</p>
+<p>The de novo assembly was further analysed using <strong>MOB-suite</strong> <span class="citation" data-cites="robertson2018mobsuite">(<a href="#ref-robertson2018mobsuite" role="doc-biblioref">Robertson and Nash 2018</a>)</span> to distinguish chromosome-associated contigs from putative plasmid-associated sequences.</p>
 <p>MOB-suite reconstructed a main chromosome-associated component and identified <strong>five candidate plasmid components</strong>.</p>
 <section id="candidate-plasmids" class="level3">
 <h3 class="anchored" data-anchor-id="candidate-plasmids">Candidate plasmids</h3>
@@ -678,7 +706,7 @@ Standards in Genomic Sciences, 2017.</p>
 </section>
 <section id="species-confirmation-by-average-nucleotide-identity" class="level2">
 <h2 class="anchored" data-anchor-id="species-confirmation-by-average-nucleotide-identity">Species confirmation by average nucleotide identity</h2>
-<p>Genome-level taxonomic identification was performed using <strong>fastANI 1.34</strong>.</p>
+<p>Genome-level taxonomic identification was performed using <strong>fastANI 1.34</strong> <span class="citation" data-cites="jain2018fastani">(<a href="#ref-jain2018fastani" role="doc-biblioref">Jain et al. 2018</a>)</span>.</p>
 <p>The E2C2 assembly was compared against reference genomes from three closely related species:</p>
 <ul>
 <li><em>Lactiplantibacillus plantarum</em></li>
@@ -821,7 +849,7 @@ Standards in Genomic Sciences, 2017.</p>
 <p>The E2C2 genome was screened for genomic features potentially relevant to microbial safety, including antimicrobial resistance determinants, virulence-associated genes, biogenic-amine pathways, prophages and plasmid-associated risk determinants.</p>
 <section id="antimicrobial-resistance" class="level3">
 <h3 class="anchored" data-anchor-id="antimicrobial-resistance">Antimicrobial resistance</h3>
-<p>AMRFinderPlus detected <strong>no reportable antimicrobial resistance determinants</strong> in the analysed genome.</p>
+<p><strong>AMRFinderPlus</strong> <span class="citation" data-cites="feldgarden2021amrfinderplus">(<a href="#ref-feldgarden2021amrfinderplus" role="doc-biblioref">Feldgarden et al. 2021</a>)</span> detected <strong>no reportable antimicrobial resistance determinants</strong> in the analysed genome.</p>
 <p>One additional determinant, <strong>clpL</strong>, was identified and classified as a heat-stress-associated gene rather than an antimicrobial-resistance gene.</p>
 <p>The ClpL protein showed:</p>
 <ul>
@@ -832,7 +860,7 @@ Standards in Genomic Sciences, 2017.</p>
 </section>
 <section id="virulence-associated-genes" class="level3">
 <h3 class="anchored" data-anchor-id="virulence-associated-genes">Virulence-associated genes</h3>
-<p>Dedicated similarity screening against VFDB was used to investigate potential virulence-associated proteins.</p>
+<p>Dedicated similarity screening against <strong>VFDB</strong> <span class="citation" data-cites="liu2019vfdb">(<a href="#ref-liu2019vfdb" role="doc-biblioref">Liu et al. 2019</a>)</span> was used to investigate potential virulence-associated proteins.</p>
 <p>Initial similarity hits were evaluated according to sequence identity, reference coverage and genomic context.</p>
 <p>No convincing evidence for intact major virulence determinants was identified in the chromosome-associated genome.</p>
 </section>
@@ -851,7 +879,7 @@ Standards in Genomic Sciences, 2017.</p>
 </section>
 <section id="prophage-associated-regions" class="level3">
 <h3 class="anchored" data-anchor-id="prophage-associated-regions">Prophage-associated regions</h3>
-<p>geNomad identified <strong>seven candidate proviral regions</strong> integrated within the chromosome-associated assembly.</p>
+<p><strong>geNomad</strong> <span class="citation" data-cites="camargo2023genomad">(<a href="#ref-camargo2023genomad" role="doc-biblioref">Camargo et al. 2023</a>)</span> identified <strong>seven candidate proviral regions</strong> integrated within the chromosome-associated assembly.</p>
 <p>No antimicrobial-resistance determinants were identified within these regions.</p>
 <p>Two short phage-associated proteins received an XhlA-like annotation during viral gene prediction. However, subsequent comparison against VFDB Set A proteins did not support their classification as known virulence-associated XhlA factors.</p>
 <p>They were therefore treated as phage-associated XhlA-like proteins rather than confirmed haemolysins.</p>
@@ -1634,9 +1662,53 @@ Comparative genomics</code></pre>
 <p>Bioinformatic analysis developed as an independent portfolio project focused on workflows and data relevant to the microbiology and biotechnology activities of Sacco System.</p>
 
 
+
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-andrewsFastQC" class="csl-entry" role="listitem">
+Andrews, Simon. n.d. <em>FastQC: A Quality Control Tool for High Throughput Sequence Data</em>.
+</div>
+<div id="ref-bankevich2012spades" class="csl-entry" role="listitem">
+Bankevich, Anton, Sergey Nurk, Dmitry Antipov, et al. 2012. <span>“SPAdes: A New Genome Assembly Algorithm and Its Applications to Single-Cell Sequencing.”</span> <em>Journal of Computational Biology</em> 19 (5): 455–77. <a href="https://doi.org/10.1089/cmb.2012.0021">https://doi.org/10.1089/cmb.2012.0021</a>.
+</div>
+<div id="ref-camargo2023genomad" class="csl-entry" role="listitem">
+Camargo, Antonio Pedro, Simon Roux, Frederik Schulz, et al. 2023. <span>“Identification of Mobile Genetic Elements with geNomad.”</span> <em>Nature Biotechnology</em>, ahead of print. <a href="https://doi.org/10.1038/s41587-023-01953-y">https://doi.org/10.1038/s41587-023-01953-y</a>.
+</div>
+<div id="ref-chen2018fastp" class="csl-entry" role="listitem">
+Chen, Shifu, Yanqing Zhou, Yaru Chen, and Jia Gu. 2018. <span>“Fastp: An Ultra-Fast All-in-One FASTQ Preprocessor.”</span> <em>Bioinformatics</em> 34 (17): i884–90. <a href="https://doi.org/10.1093/bioinformatics/bty560">https://doi.org/10.1093/bioinformatics/bty560</a>.
+</div>
+<div id="ref-chklovski2023checkm2" class="csl-entry" role="listitem">
+Chklovski, Alex, Donovan H. Parks, Ben J. Woodcroft, and Gene W. Tyson. 2023. <span>“CheckM2: A Rapid, Scalable and Accurate Tool for Assessing Microbial Genome Quality Using Machine Learning.”</span> <em>Nature Methods</em> 20 (8): 1203–12. <a href="https://doi.org/10.1038/s41592-023-01940-w">https://doi.org/10.1038/s41592-023-01940-w</a>.
+</div>
+<div id="ref-ewels2016multiqc" class="csl-entry" role="listitem">
+Ewels, Philip, Måns Magnusson, Sverker Lundin, and Max Käller. 2016. <span>“MultiQC: Summarize Analysis Results for Multiple Tools and Samples in a Single Report.”</span> <em>Bioinformatics</em> 32 (19): 3047–48. <a href="https://doi.org/10.1093/bioinformatics/btw354">https://doi.org/10.1093/bioinformatics/btw354</a>.
+</div>
+<div id="ref-feldgarden2021amrfinderplus" class="csl-entry" role="listitem">
+Feldgarden, Michael, Vyacheslav Brover, Narjol Gonzalez-Escalona, et al. 2021. <span>“AMRFinderPlus and the Reference Gene Catalog Facilitate Examination of the Genomic Links Among Antimicrobial Resistance, Stress Response, and Virulence.”</span> <em>Scientific Reports</em> 11: 12728. <a href="https://doi.org/10.1038/s41598-021-91456-0">https://doi.org/10.1038/s41598-021-91456-0</a>.
+</div>
+<div id="ref-gurevich2013quast" class="csl-entry" role="listitem">
+Gurevich, Alexey, Vladislav Saveliev, Nikolay Vyahhi, and Glenn Tesler. 2013. <span>“QUAST: Quality Assessment Tool for Genome Assemblies.”</span> <em>Bioinformatics</em> 29 (8): 1072–75. <a href="https://doi.org/10.1093/bioinformatics/btt086">https://doi.org/10.1093/bioinformatics/btt086</a>.
+</div>
+<div id="ref-jain2018fastani" class="csl-entry" role="listitem">
+Jain, Chirag, Luis M. Rodriguez-R, Adam M. Phillippy, Konstantinos T. Konstantinidis, and Srinivas Aluru. 2018. <span>“High Throughput ANI Analysis of 90K Prokaryotic Genomes Reveals Clear Species Boundaries.”</span> <em>Nature Communications</em> 9: 5114. <a href="https://doi.org/10.1038/s41467-018-07641-9">https://doi.org/10.1038/s41467-018-07641-9</a>.
+</div>
+<div id="ref-koster2012snakemake" class="csl-entry" role="listitem">
+Köster, Johannes, and Sven Rahmann. 2012. <span>“Snakemake—a Scalable Bioinformatics Workflow Engine.”</span> <em>Bioinformatics</em> 28 (19): 2520–22. <a href="https://doi.org/10.1093/bioinformatics/bts480">https://doi.org/10.1093/bioinformatics/bts480</a>.
+</div>
+<div id="ref-liu2019vfdb" class="csl-entry" role="listitem">
+Liu, Bo, Dandan Zheng, Qi Jin, Lihong Chen, and Jian Yang. 2019. <span>“VFDB 2019: A Comparative Pathogenomic Platform with an Interactive Web Interface.”</span> <em>Nucleic Acids Research</em> 47 (D1): D687–92. <a href="https://doi.org/10.1093/nar/gky1080">https://doi.org/10.1093/nar/gky1080</a>.
+</div>
+<div id="ref-robertson2018mobsuite" class="csl-entry" role="listitem">
+Robertson, James, and John H. E. Nash. 2018. <span>“MOB-Suite: Software Tools for Clustering, Reconstruction and Typing of Plasmids from Draft Assemblies.”</span> <em>Microbial Genomics</em> 4 (8): e000206. <a href="https://doi.org/10.1099/mgen.0.000206">https://doi.org/10.1099/mgen.0.000206</a>.
+</div>
+<div id="ref-suryavanshi2017e2c2" class="csl-entry" role="listitem">
+Suryavanshi, Mangesh V., Dhiraj Paul, Swapnil P. Doijad, et al. 2017. <span>“Draft Genome Sequence of Lactobacillus Plantarum Strains E2C2 and E2C5 Isolated from Human Stool Culture.”</span> <em>Standards in Genomic Sciences</em> 12: 15. <a href="https://doi.org/10.1186/s40793-017-0222-x">https://doi.org/10.1186/s40793-017-0222-x</a>.
+</div>
+<div id="ref-wood2019kraken2" class="csl-entry" role="listitem">
+Wood, Derrick E., Jennifer Lu, and Ben Langmead. 2019. <span>“Improved Metagenomic Analysis with Kraken 2.”</span> <em>Genome Biology</em> 20: 257. <a href="https://doi.org/10.1186/s13059-019-1891-0">https://doi.org/10.1186/s13059-019-1891-0</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -1710,7 +1782,7 @@ Comparative genomics</code></pre>
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/Otrebbob\.github\.io\/scientifi-portfolio\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

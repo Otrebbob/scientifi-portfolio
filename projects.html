@@ -137,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#current-projects" id="toc-current-projects" class="nav-link" data-scroll-target="#current-projects">Current projects</a>
   <ul class="collapse">
   <li><a href="#reanalysis-of-public-illumina-data-from-chroococcidiopsis-associated-samples" id="toc-reanalysis-of-public-illumina-data-from-chroococcidiopsis-associated-samples" class="nav-link" data-scroll-target="#reanalysis-of-public-illumina-data-from-chroococcidiopsis-associated-samples">Reanalysis of public Illumina data from <em>Chroococcidiopsis</em>-associated samples</a></li>
-  <li><a href="#reproducible-genomic-characterization-of-a-lactic-acid-bacterium" id="toc-reproducible-genomic-characterization-of-a-lactic-acid-bacterium" class="nav-link" data-scroll-target="#reproducible-genomic-characterization-of-a-lactic-acid-bacterium">Reproducible Genomic Characterization of a Lactic Acid Bacterium</a></li>
+  <li><a href="#comparative-genomics-and-functional-characterization-of-lactiplantibacillus-plantarum-e2c2" id="toc-comparative-genomics-and-functional-characterization-of-lactiplantibacillus-plantarum-e2c2" class="nav-link" data-scroll-target="#comparative-genomics-and-functional-characterization-of-lactiplantibacillus-plantarum-e2c2">Comparative Genomics and Functional Characterization of <em>Lactiplantibacillus plantarum</em> E2C2</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -187,8 +187,8 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>My contribution:</strong> Bioinformatic analysis, workflow design, interpretation and documentation.</p>
 <p><a href="./projects/chroococcidiopsis-wgs/index.html">View full project →</a></p>
 </section>
-<section id="reproducible-genomic-characterization-of-a-lactic-acid-bacterium" class="level3">
-<h3 class="anchored" data-anchor-id="reproducible-genomic-characterization-of-a-lactic-acid-bacterium">Reproducible Genomic Characterization of a Lactic Acid Bacterium</h3>
+<section id="comparative-genomics-and-functional-characterization-of-lactiplantibacillus-plantarum-e2c2" class="level3">
+<h3 class="anchored" data-anchor-id="comparative-genomics-and-functional-characterization-of-lactiplantibacillus-plantarum-e2c2">Comparative Genomics and Functional Characterization of <em>Lactiplantibacillus plantarum</em> E2C2</h3>
 <p>Independent bioinformatics project focused on the genomic characterization of a lactic acid bacterium relevant to food biotechnology and probiotic applications.</p>
 <p>The project includes raw-read quality control, preprocessing, taxonomic assessment, de novo assembly, genome-quality evaluation, annotation, safety and functional screening, and comparative genomics within a reproducible Snakemake workflow.</p>
 <p><a href="./projects/sacco-lab/index.html">View full project →</a></p>
@@ -272,7 +272,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/Otrebbob\.github\.io\/scientifi-portfolio\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
