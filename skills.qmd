@@ -1,0 +1,179 @@
+---
+title: "Skills"
+---
+
+## Bioinformatics & Genomics
+
+### Bacterial whole-genome sequencing
+
+- Illumina paired-end read processing and quality assessment
+- Read trimming and adapter removal
+- Taxonomic profiling and contamination screening
+- De novo bacterial genome assembly
+- Assembly-quality assessment
+- Genome completeness and contamination estimation
+- Read mapping and genome-coverage analysis
+- Chromosome and plasmid reconstruction
+- Average nucleotide identity (ANI) analysis
+- Structural and functional genome annotation
+- Antimicrobial-resistance and virulence-associated gene screening
+- Prophage and mobile-element analysis
+- Pangenome and comparative-genomics analysis
+- Functional genomic screening of metabolic and adaptive traits
+
+**Tools:**  
+`fastp` · `FastQC` · `MultiQC` · `Kraken2` · `SPAdes` · `QUAST` · `CheckM2` · `BWA` · `SAMtools` · `MOB-suite` · `fastANI` · `Bakta` · `AMRFinderPlus` · `geNomad` · `Panaroo` · `BLAST`
+
+---
+
+### Reproducible bioinformatics workflows
+
+- Modular workflow development
+- Automated dependency management
+- Conda-based isolated environments
+- Reproducible multi-step genomic pipelines
+- Command-line data processing in Linux/WSL
+- Integration of QC, assembly, annotation and comparative-genomics workflows
+
+**Tools:**  
+`Snakemake` · `Conda` · `Bash` · `Linux / WSL` · `Git` · `GitHub` · `Quarto`
+
+---
+
+### Metabarcoding & microbial community analysis
+
+- Amplicon sequencing data processing
+- Sequence quality filtering
+- OTU/ASV-based workflows
+- Taxonomic assignment
+- Fungal and microbial community profiling
+- Alpha- and beta-diversity analysis
+- Multivariate community ecology
+
+**Tools and databases:**  
+`DADA2` · `VSEARCH` · `USEARCH` · `AMPtk` · `UNITE` · `RDP` · `phyloseq` · `vegan` · `microeco`
+
+---
+
+## Phylogenetics & Molecular Evolution
+
+- Multiple sequence alignment
+- Molecular taxonomy
+- Phylogenetic reconstruction
+- Maximum Likelihood inference
+- Bayesian phylogenetic inference
+- Sequence similarity and homology analysis
+- Taxonomic interpretation integrating molecular and morphological evidence
+
+**Tools:**  
+`MAFFT` · `RAxML` · `MrBayes` · `CIPRES` · `BLAST`
+
+---
+
+## Data Analysis & R
+
+- Statistical analysis in R
+- Data cleaning and transformation
+- Scientific visualization
+- Community ecology statistics
+- Diversity indices
+- PERMANOVA
+- Mantel tests
+- Random Forest analysis
+- Publication-quality genomic figures
+- Reproducible scientific reporting
+
+**Tools:**  
+`R` · `RStudio` · `ggplot2` · `dplyr` · `tidyr` · `phyloseq` · `vegan` · `microeco` · `Quarto`
+
+---
+
+## Molecular Biology & NGS
+
+- Genomic DNA and RNA extraction
+- CTAB and kit-based nucleic-acid extraction
+- PCR and qPCR
+- Primer design
+- Gel electrophoresis
+- DNA purification
+- Sanger sequencing workflows
+- Illumina MiSeq sequencing workflows
+- Oxford Nanopore sequencing workflows
+- NGS library preparation
+- Amplicon-based sequencing
+- Whole-genome sequencing workflows
+
+---
+
+## Microbiology & Culture
+
+- Aseptic microbiological techniques
+- Isolation and maintenance of microbial cultures
+- Axenic culture establishment
+- Cyanobacterial culture
+- Microalgal culture
+- Filamentous fungal culture
+- Yeast culture
+- Bacterial culture
+- Cryopreservation of microbial strains
+- Controlled growth experiments
+- Environmental and extremophile microbiology
+
+---
+
+## Experimental Microbiology
+
+- Experimental design
+- Controlled light-growth experiments
+- White-light and far-red-light cultivation
+- Photoperiod manipulation
+- Temperature and nutrient manipulation
+- Growth monitoring by optical density
+- Stress-response experiments
+- Microbial phenotype characterization
+
+---
+
+## Microscopy & Analytical Methods
+
+- Light microscopy
+- Confocal laser scanning microscopy (CLSM)
+- Fluorescence imaging
+- Lambda-scan analysis
+- UV/Vis reflectance spectroscopy
+- Spectrophotometry
+- Optical-density measurements
+- Quantitative experimental-data analysis
+
+---
+
+## Research Areas
+
+My research experience spans:
+
+- Antarctic microbiology
+- Extremophiles and astrobiology
+- Cyanobacteria
+- Fungi and lichen-associated microorganisms
+- Lichen symbioses
+- Microbial ecology
+- Molecular taxonomy
+- Comparative genomics
+- Microbial adaptation to environmental stress
+- Food and industrial microbiology
+- Microbial biotechnology
+
+---
+
+## Scientific Research
+
+- Experimental design and hypothesis development
+- Scientific literature review
+- Bioinformatic workflow design
+- Integration of wet-lab and computational approaches
+- Scientific data interpretation
+- Manuscript preparation
+- Peer-reviewed scientific publishing
+- Scientific presentations
+- Student mentoring and laboratory training
+- Collaboration in international research teams

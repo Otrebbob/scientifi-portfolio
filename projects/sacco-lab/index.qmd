@@ -1,5 +1,6 @@
---
-title: "Sacco Lab Analysis"
+---
+title: "Comparative Genomics and Functional Characterization of Lactiplantibacillus plantarum E2C2"
+bibliography: references.bib
 ---
 
 ## Project overview
@@ -10,7 +11,7 @@ The analysis integrates read quality control, taxonomic assessment, de novo geno
 
 Particular attention was given to traits relevant to food biotechnology and potential probiotic applications, including bacteriocin-associated loci, stress-response systems, carbohydrate utilization, adhesion-associated proteins, exopolysaccharide biosynthesis and fermentation-related metabolic functions.
 
-The complete analysis was implemented as a modular **Snakemake workflow** using isolated Conda environments to support reproducibility and dependency management.
+The complete analysis was implemented as a modular **Snakemake workflow** [@koster2012snakemake] using isolated Conda environments to support reproducibility and dependency management.
 
 ## Project objectives
 
@@ -41,7 +42,7 @@ The integrated genomic analysis of *Lactiplantibacillus plantarum* E2C2 highligh
 
 ## Read preprocessing and quality filtering
 
-Raw Illumina paired-end reads were processed using **fastp 1.3.6**, followed by quality assessment using **FastQC 0.12.1** and aggregation of the final reports with **MultiQC**.
+Raw Illumina paired-end reads were processed using **fastp 1.3.6** [@chen2018fastp], followed by quality assessment using **FastQC 0.12.1** [@andrewsFastQC] and aggregation of the final reports with **MultiQC** [@ewels2016multiqc].
 
 ### Raw sequencing data
 
@@ -131,7 +132,7 @@ The raw sequencing data and the original experimental work were not generated as
 
 ### Original publication
 
-The E2C2 strain was previously described in:
+The E2C2 strain was originally described by Suryavanshi et al. [@suryavanshi2017e2c2].
 
 **Suryavanshi MV, Paul D, Doijad SP, Bhute SS, Hingamire TB, Gune RP, et al.**  
 *Draft genome sequence of Lactobacillus plantarum strains E2C2 and E2C5 isolated from human stool culture.*  
@@ -143,7 +144,7 @@ These published values provide an external reference against which the independe
 
 ## Taxonomic assessment
 
-Taxonomic classification of the quality-filtered sequencing reads was performed using **Kraken2** to evaluate whether the dataset was consistent with the expected taxonomic identity of the E2C2 strain and to identify potential evidence of contamination.
+Taxonomic classification of the quality-filtered sequencing reads was performed using **Kraken2** [@wood2019kraken2] to evaluate whether the dataset was consistent with the expected taxonomic identity of the E2C2 strain and to identify potential evidence of contamination.
 
 ### Kraken2 results
 
@@ -172,13 +173,13 @@ For this reason, Kraken2 was used primarily as an initial taxonomic and contamin
 
 ## De novo genome assembly and quality assessment
 
-The quality-filtered paired-end reads were assembled de novo using **SPAdes 3.15.5** in careful mode.
+The quality-filtered paired-end reads were assembled de novo using **SPAdes 3.15.5** [@bankevich2012spades] in careful mode.
 
 The assembly was generated using automatic k-mer selection, 4 CPU threads and an 8 GB memory limit.
 
 ### Assembly statistics
 
-Assembly quality was assessed using **QUAST 5.3.0**.
+Assembly quality was assessed using **QUAST 5.3.0** [@gurevich2013quast].
 
 The main assembly metrics were:
 
@@ -216,7 +217,7 @@ The independently reconstructed E2C2 genome showed a high degree of continuity, 
 
 The reconstructed genome size of approximately **3.8 Mb** and the **43.99% GC content** were highly consistent with the previously published E2C2 draft genome, which was reported to be approximately 3.60 Mb with a GC content of 43.99%.
 
-CheckM2 estimated the genome to be essentially complete, although the **4.77% contamination estimate** indicates that the assembly should not be interpreted as completely free of potentially redundant or taxonomically discordant sequence.
+**CheckM2** [@chklovski2023checkm2] estimated the genome to be essentially complete...
 
 This result motivated additional genome-level taxonomic assessment and inspection of chromosomal and plasmid-associated sequences in subsequent stages of the analysis.
 
@@ -271,7 +272,7 @@ In addition, one large contig, **NODE_3**, showed high sequence coverage but an 
 
 ## Plasmid reconstruction and mobile elements
 
-The de novo assembly was further analysed using **MOB-suite** to distinguish chromosome-associated contigs from putative plasmid-associated sequences.
+The de novo assembly was further analysed using **MOB-suite** [@robertson2018mobsuite] to distinguish chromosome-associated contigs from putative plasmid-associated sequences.
 
 MOB-suite reconstructed a main chromosome-associated component and identified **five candidate plasmid components**.
 
@@ -308,7 +309,7 @@ Because MOB-suite reconstructs plasmid candidates computationally from draft ass
 
 ## Species confirmation by average nucleotide identity
 
-Genome-level taxonomic identification was performed using **fastANI 1.34**.
+Genome-level taxonomic identification was performed using **fastANI 1.34** [@jain2018fastani].
 
 The E2C2 assembly was compared against reference genomes from three closely related species:
 
@@ -382,7 +383,7 @@ The E2C2 genome was screened for genomic features potentially relevant to microb
 
 ### Antimicrobial resistance
 
-AMRFinderPlus detected **no reportable antimicrobial resistance determinants** in the analysed genome.
+**AMRFinderPlus** [@feldgarden2021amrfinderplus] detected **no reportable antimicrobial resistance determinants** in the analysed genome.
 
 One additional determinant, **clpL**, was identified and classified as a heat-stress-associated gene rather than an antimicrobial-resistance gene.
 
@@ -395,7 +396,7 @@ This protein is associated with cellular stress response and protein quality con
 
 ### Virulence-associated genes
 
-Dedicated similarity screening against VFDB was used to investigate potential virulence-associated proteins.
+Dedicated similarity screening against **VFDB** [@liu2019vfdb] was used to investigate potential virulence-associated proteins.
 
 Initial similarity hits were evaluated according to sequence identity, reference coverage and genomic context.
 
@@ -417,7 +418,7 @@ These results indicate that the major biogenic-amine pathways investigated were 
 
 ### Prophage-associated regions
 
-geNomad identified **seven candidate proviral regions** integrated within the chromosome-associated assembly.
+**geNomad** [@camargo2023genomad] identified **seven candidate proviral regions** integrated within the chromosome-associated assembly.
 
 No antimicrobial-resistance determinants were identified within these regions.
 

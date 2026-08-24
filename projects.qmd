@@ -27,7 +27,7 @@ Publicly available sequencing data retrieved from NCBI SRA were used to develop 
 
 [View full project →](projects/chroococcidiopsis-wgs/index.qmd)
 
-### Reproducible Genomic Characterization of a Lactic Acid Bacterium
+### Comparative Genomics and Functional Characterization of *Lactiplantibacillus plantarum* E2C2
 
 Independent bioinformatics project focused on the genomic characterization of a lactic acid bacterium relevant to food biotechnology and probiotic applications.
 
