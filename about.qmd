@@ -2,4 +2,40 @@
 title: "About"
 ---
 
-About this site
+## About me
+
+I have been fascinated by the natural sciences for as long as I can remember. As a child, I was always curious about how living organisms worked, how they adapted to their environment, and why nature could produce such an extraordinary diversity of forms and strategies.
+
+That curiosity gradually turned into a passion for biology. During my studies, I became particularly interested in microorganisms because they combine simplicity with an incredible level of biological complexity. They can survive in extreme environments, form intricate ecological relationships and adapt to conditions that would be impossible for most other forms of life.
+
+This interest eventually led me toward environmental microbiology, cyanobacteria, fungi, lichens and extremophiles. During my academic training and PhD, I worked with microorganisms from extreme environments, particularly Antarctic ecosystems, combining laboratory experiments, molecular biology, microscopy, sequencing and ecological analysis.
+
+At the same time, I became increasingly fascinated by another field: computer science.
+
+I realized that sequencing technologies were generating enormous amounts of biological information and that computational tools made it possible to explore questions that would be almost impossible to answer experimentally alone. Bioinformatics therefore became a natural extension of my biological interests.
+
+What I enjoy most is the possibility of connecting these two worlds.
+
+I like understanding what happens in the laboratory, but I also enjoy opening a sequencing dataset, building an analysis pipeline, reconstructing a genome and trying to understand what that genome can tell us about the biology of an organism.
+
+For me, bioinformatics is not simply about running software. The interesting part is asking the biological question behind the data and interpreting the results in the context of physiology, ecology and evolution.
+
+I am an extremely curious person, and curiosity has probably been the main driver of my scientific path. I enjoy learning new techniques, testing new tools and exploring areas that I do not yet know well. I rarely see learning as something that ends with a degree or a particular job; I see it as a continuous process.
+
+This is also why my background has gradually become quite interdisciplinary. Over the years I have worked with microbiology, molecular biology, microscopy, phylogenetics, microbial ecology, genomics, metabarcoding, statistics and programming.
+
+More recently, I have been strengthening the computational side of my profile through independent projects in microbial genomics, comparative genomics and reproducible bioinformatics workflows.
+
+The projects collected in this portfolio are part of that process. They allow me to work with real biological datasets, explore new computational approaches and document complete analyses from raw sequencing data to biological interpretation.
+
+What motivates me most is still the same curiosity that originally brought me toward science: understanding how living systems work and continuously learning new ways to investigate them.
+
+## Contact
+
+I am always interested in discussing research, microbial genomics, bioinformatics and biotechnology, as well as potential collaborations and professional opportunities.
+
+**Email:** decarolisroberto.ce@gmail.com  
+<br>
+**GitHub:** [Otrebbob](https://github.com/Otrebbob)  
+<br>
+**LinkedIn:** [Roberto De Carolis](https://linkedin.com/in/roberto-de-carolis-9428211ab/)

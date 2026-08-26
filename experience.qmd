@@ -1,0 +1,86 @@
+---
+title: "Experience"
+---
+
+## Research Experience
+
+### Research Collaborator
+**University of Trieste**  
+*terminated*
+
+Continued research activities in environmental microbiology, molecular biology and bioinformatics, with a focus on microbial diversity and molecular taxonomy.
+
+**Main activities**
+
+- Aseptic isolation and axenic cultivation of algae and fungi
+- DNA/RNA extraction and PCR/qPCR workflows
+- Sanger, Illumina and Oxford Nanopore sequencing
+- Phylogenetic analysis using MAFFT, RAxML and MrBayes
+- NGS and metabarcoding data processing
+- Microbial-community analysis using AMPtk, USEARCH, VSEARCH and DADA2
+- Statistical and community-ecology analysis in R
+- Development of protocols for molecular-taxonomy applications
+- Training and mentoring of graduate students in laboratory methods and safety
+
+---
+
+### PhD Researcher — Environmental Life Science
+**University of Trieste**  
+*terminated*
+
+Research focused on microbial diversity associated with lichens and extreme environments, integrating microbiology, molecular biology, microscopy, phylogenetics and bioinformatics.
+
+**Main activities**
+
+- Field sampling of biological and environmental material
+- Aseptic isolation and cultivation of algae, cyanobacteria and fungi
+- DNA, RNA and protein extraction
+- PCR/qPCR and primer design
+- Sanger, Illumina MiSeq sequencing
+- Biodiversity analyses on microbial community
+- Metabarcoding and microbial-community analysis
+- Taxonomic assignment using UNITE and RDP
+- Multiple-sequence alignment and phylogenetic reconstruction
+- Maximum Likelihood and Bayesian phylogenetic inference
+- Statistical ecology in R, including diversity indices, PERMANOVA, Mantel tests and Random Forest
+- Light and confocal microscopy
+- Scientific writing and preparation of peer-reviewed publications
+- Student mentoring and laboratory training
+
+---
+
+### Master's Research
+**University of Rome Tor Vergata**  
+*Terminated*
+
+Research focused on cyanobacteria from extreme environments and their physiological and molecular adaptation to different light conditions.
+
+**Main activities**
+
+- Cultivation of cyanobacterial strains from hot- and cold-desert environments
+- Controlled white-light and far-red-light growth experiments
+- Spectrophotometric monitoring of microbial growth
+- Confocal fluorescence microscopy and lambda-scan analysis
+- UV/Vis reflectance spectroscopy
+- qPCR and PCR-based gene screening
+- RNA and DNA extraction
+- Cloning
+- Investigation of photoacclimation and stress-adaptation mechanisms
+
+---
+
+## Additional Professional Experience
+
+### Real Estate Consultant
+**Romano Immobiliare — Milan**  
+*Terminated*
+
+Worked in a fast-paced client-facing environment, strengthening transferable skills in organization, communication, negotiation and problem solving.
+
+**Main activities**
+
+- Client needs assessment and relationship management
+- Coordination of appointments and property visits
+- Management of multiple concurrent cases
+- Market research and analysis
+- Follow-up and cross-team communication
