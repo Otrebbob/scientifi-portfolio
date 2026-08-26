@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About – Roberto De Carolis | Microbiology &amp; Bioinformatic</title>
+<title>About – Roberto De CarolisMicrobiology &amp; Bioinformatics</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -70,6 +70,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -83,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Roberto De Carolis | Microbiology &amp; Bioinformatic</span>
+    <span class="navbar-title">Roberto De Carolis<br><span class="site-subtitle">Microbiology &amp; Bioinformatics</span></span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -109,6 +110,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Skills</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./experience.html"> 
+<span class="menu-text">Experience</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link active" href="./about.html" aria-current="page"> 
 <span class="menu-text">About</span></a>
   </li>  
@@ -127,8 +132,15 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#about-me" id="toc-about-me" class="nav-link active" data-scroll-target="#about-me">About me</a></li>
+  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -152,9 +164,31 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>About this site</p>
+<section id="about-me" class="level2">
+<h2 class="anchored" data-anchor-id="about-me">About me</h2>
+<p>I have been fascinated by the natural sciences for as long as I can remember. As a child, I was always curious about how living organisms worked, how they adapted to their environment, and why nature could produce such an extraordinary diversity of forms and strategies.</p>
+<p>That curiosity gradually turned into a passion for biology. During my studies, I became particularly interested in microorganisms because they combine simplicity with an incredible level of biological complexity. They can survive in extreme environments, form intricate ecological relationships and adapt to conditions that would be impossible for most other forms of life.</p>
+<p>This interest eventually led me toward environmental microbiology, cyanobacteria, fungi, lichens and extremophiles. During my academic training and PhD, I worked with microorganisms from extreme environments, particularly Antarctic ecosystems, combining laboratory experiments, molecular biology, microscopy, sequencing and ecological analysis.</p>
+<p>At the same time, I became increasingly fascinated by another field: computer science.</p>
+<p>I realized that sequencing technologies were generating enormous amounts of biological information and that computational tools made it possible to explore questions that would be almost impossible to answer experimentally alone. Bioinformatics therefore became a natural extension of my biological interests.</p>
+<p>What I enjoy most is the possibility of connecting these two worlds.</p>
+<p>I like understanding what happens in the laboratory, but I also enjoy opening a sequencing dataset, building an analysis pipeline, reconstructing a genome and trying to understand what that genome can tell us about the biology of an organism.</p>
+<p>For me, bioinformatics is not simply about running software. The interesting part is asking the biological question behind the data and interpreting the results in the context of physiology, ecology and evolution.</p>
+<p>I am an extremely curious person, and curiosity has probably been the main driver of my scientific path. I enjoy learning new techniques, testing new tools and exploring areas that I do not yet know well. I rarely see learning as something that ends with a degree or a particular job; I see it as a continuous process.</p>
+<p>This is also why my background has gradually become quite interdisciplinary. Over the years I have worked with microbiology, molecular biology, microscopy, phylogenetics, microbial ecology, genomics, metabarcoding, statistics and programming.</p>
+<p>More recently, I have been strengthening the computational side of my profile through independent projects in microbial genomics, comparative genomics and reproducible bioinformatics workflows.</p>
+<p>The projects collected in this portfolio are part of that process. They allow me to work with real biological datasets, explore new computational approaches and document complete analyses from raw sequencing data to biological interpretation.</p>
+<p>What motivates me most is still the same curiosity that originally brought me toward science: understanding how living systems work and continuously learning new ways to investigate them.</p>
+</section>
+<section id="contact" class="level2">
+<h2 class="anchored" data-anchor-id="contact">Contact</h2>
+<p>I am always interested in discussing research, microbial genomics, bioinformatics and biotechnology, as well as potential collaborations and professional opportunities.</p>
+<p><strong>Email:</strong> decarolisroberto.ce@gmail.com<br>
+<br> <strong>GitHub:</strong> <a href="https://github.com/Otrebbob">Otrebbob</a><br>
+<br> <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/roberto-de-carolis-9428211ab/">Roberto De Carolis</a></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -244,6 +278,11 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -562,4 +601,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
