@@ -21,11 +21,14 @@ This website collects my scientific projects, pubblication, bioinformatic analys
 
 ### Current project
 
-**Reanalysis of public Illumina data from Chroococcidiopsis-associated samples**
+### Ecogenomics and Comparative Genomics of Chroococcidiopsidales
 
-Publicly available sequencing data retrieved from NCBI SRA were used to build and document a complete microbial genomics workflow, from raw-read quality control to taxonomic profiling, assembly and downstream analysis and finally pipeline construction.
+**Project status:** Ongoing  
+**Last update:** September 2026
 
+Ecogenomic investigation integrating genome-quality assessment, genome-based taxonomy, phylogenomics, comparative genomics and environmental metadata across *Chroococcidiopsis* and related extremophilic cyanobacterial lineages.
 
+[View project](projects/chroococcidiopsales-ecogenomics/)
 
 This is a Quarto website.
 

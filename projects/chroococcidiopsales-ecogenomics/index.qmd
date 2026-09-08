@@ -1,0 +1,164 @@
+---
+title: "Ecogenomics and Comparative Genomics of Chroococcidiopsidales"
+bibliography: references.bib
+---
+
+**Project status:** Ongoing  
+**Last update:** September 2026
+
+## Project overview
+
+This independent project explores the **genomic, taxonomic and ecological diversity of Chroococcidiopsidales**, with particular attention to *Chroococcidiopsis* and related cyanobacterial lineages associated with extreme terrestrial environments.
+
+The study uses publicly available genomic resources together with environmental metadata to investigate diversity at a broader scale than single-strain genome characterization.
+
+The central idea is to integrate:
+
+- genome quality assessment
+- genome-based taxonomy
+- phylogenomics
+- genomic similarity
+- comparative genomics
+- functional annotation
+- environmental metadata
+
+into a single ecogenomic framework.
+
+Members of *Chroococcidiopsis* are particularly interesting because several strains have been isolated from hot and cold desert lithic environments and have been extensively studied for their ability to tolerate desiccation, radiation and other extreme conditions [@billi2000radiation; @rigano2026chroococcidiopsis].
+
+Recent comparative genomic work on *Chroococcidiopsis* sp. CCMEE 029, CCMEE 057 and CCMEE 064 showed that closely related desert strains share a substantial conserved genomic repertoire while also retaining strain-specific differences in metabolic and stress-associated functions [@rigano2026chroococcidiopsis].
+
+However, publicly available genomic databases now contain a broader collection of cultured isolates, environmental genomes and single-cell genomes assigned to *Chroococcidiopsis* and related lineages.
+
+Some of these genomes are associated with detailed environmental metadata, including geographic origin, substrate and ecosystem characteristics. For example, publicly available JGI records include *Chroococcidiopsis* genomes recovered from rock-dwelling communities associated with gypsum substrates in the Atacama Desert [@jgiSAGGYP7; @jgiSAGGYP10].
+
+This creates an opportunity to move from the comparison of a few experimentally characterized strains toward a broader **ecogenomic investigation of Chroococcidiopsidales diversity**.
+
+The project therefore asks a central question:
+
+> **How is genomic diversity within Chroococcidiopsidales structured across evolutionary lineages and environmental contexts?**
+
+Rather than assuming that particular genes directly explain ecological adaptation, the analysis aims to identify genomic and ecological associations that can generate biologically testable hypotheses.
+
+---
+
+## Scientific background
+
+Cyanobacteria represent a highly diverse group of photosynthetic microorganisms capable of colonizing a wide range of environments.
+
+Within this diversity, *Chroococcidiopsis* has attracted particular attention because of the extraordinary stress tolerance reported for several desert-derived strains.
+
+Experimental studies have demonstrated substantial resistance to desiccation and ionizing radiation in *Chroococcidiopsis*, making members of the genus important models for investigating microbial survival under extreme environmental conditions [@billi2000radiation].
+
+More recent genomic analyses have expanded this perspective.
+
+Comparative genomics of the desert strains CCMEE 029, CCMEE 057 and CCMEE 064 identified conserved systems potentially associated with:
+
+- desiccation response
+- compatible-solute metabolism
+- DNA protection and repair
+- oxidative-stress defence
+- photoprotection
+
+while also revealing genomic differences among individual strains [@rigano2026chroococcidiopsis].
+
+These observations suggest that extreme-environment survival may involve both a **conserved stress-response repertoire** and lineage-specific genomic characteristics.
+
+At the same time, genome-based taxonomy has substantially changed how bacterial evolutionary relationships are investigated.
+
+Resources such as the Genome Taxonomy Database use genome-scale phylogenetic information to construct a standardized bacterial and archaeal taxonomy [@parks2018gtdb; @parks2020taxonomy; @parks2022gtdb].
+
+This is particularly relevant for cyanobacteria because traditional names, database assignments and genome-based classifications do not always describe evolutionary diversity in exactly the same way.
+
+For this reason, this project does not treat the existing taxonomic label of each genome as an unquestionable biological identity.
+
+Instead, taxonomic information is evaluated together with:
+
+- genome quality
+- phylogenomic placement
+- genome-wide similarity
+- environmental origin
+
+before comparative biological interpretation.
+
+A further opportunity comes from the increasing availability of environmental and single-cell genomic datasets.
+
+For example, JGI genomic records assigned to *Chroococcidiopsis* include uncultured organisms associated with terrestrial rock-dwelling communities from the Atacama Desert, with metadata describing gypsum substrates, geographic coordinates and elevation [@jgiSAGGYP7; @jgiSAGGYP10].
+
+Such records provide a direct connection between **genome and habitat**.
+
+This connection forms the basis of the ecogenomic component of the project.
+
+Instead of analysing genome variation independently of environmental origin, the objective is to investigate whether phylogenetic and genomic patterns correspond to differences in ecological context.
+
+---
+
+## Project objectives
+
+The project is structured around four connected objectives.
+
+### 1. Curate a reliable genomic dataset
+
+The first objective is to identify publicly available genomes assigned to Chroococcidiopsidales and evaluate whether they are suitable for comparative analysis.
+
+Genome records may differ substantially in:
+
+- completeness
+- contamination
+- assembly fragmentation
+- genome size
+- sequencing strategy
+- biological origin
+
+This is particularly important when working with single-cell and environmental genomes, where incomplete assemblies or contamination can strongly influence downstream analyses.
+
+Genome-quality assessment therefore precedes phylogenomic and comparative analyses.
+
+### 2. Investigate genomic taxonomy and evolutionary relationships
+
+The second objective is to reconstruct evolutionary relationships among selected genomes using genome-scale information.
+
+The project compares existing taxonomic assignments with genome-based evidence in order to identify:
+
+- closely related genomic clusters
+- divergent lineages
+- possible inconsistencies between classifications
+- relationships that may not be apparent from historical species or genus labels
+
+Genome-based taxonomy is therefore treated as an analytical component rather than simply copied from database annotations [@parks2018gtdb; @parks2020taxonomy; @parks2022gtdb].
+
+### 3. Characterize conserved and variable genomic features
+
+The third objective is to compare gene content and functional potential across the selected genomes.
+
+Particular attention will be given to systems potentially relevant to survival in extreme terrestrial environments, including:
+
+- desiccation-associated functions
+- osmoprotection
+- DNA protection and repair
+- oxidative-stress defence
+- photoprotection
+- extracellular and cell-surface functions
+
+Previous work on CCMEE 029, CCMEE 057 and CCMEE 064 provides a useful biological framework for defining several of these functional categories [@rigano2026chroococcidiopsis].
+
+The broader dataset will allow these traits to be investigated across a larger evolutionary context.
+
+### 4. Integrate genomic and ecological information
+
+The final objective is to connect genomic variation with environmental metadata.
+
+Where available, each genome will be associated with information describing:
+
+- geographic origin
+- ecosystem type
+- substrate
+- elevation
+- cultivation status
+- environmental source
+
+The aim is to determine whether genomic and phylogenetic patterns show associations with ecological characteristics.
+
+These associations will be interpreted as **hypothesis-generating ecogenomic patterns**, not as direct demonstrations of physiological adaptation.
+
+Experimental validation would ultimately be required to establish causal links between genomic traits and environmental phenotypes.

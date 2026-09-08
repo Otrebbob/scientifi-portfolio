@@ -8,24 +8,14 @@ This section contains independent analyses and reproducible workflows based on p
 
 ## Current projects
 
-### Reanalysis of public Illumina data from *Chroococcidiopsis*-associated samples
+### Ecogenomics and Comparative Genomics of Chroococcidiopsidales
 
-Publicly available sequencing data retrieved from NCBI SRA were used to develop and document a microbial genomics workflow including:
+**Project status:** Ongoing  
+**Last update:** September 2026
 
-- raw read quality control
-- taxonomic profiling
-- adapter and quality trimming
-- de novo assembly
-- assembly quality assessment
-- read mapping
-- downstream genomic analysis
-- construction of a final pipeline
+Independent ecogenomics project integrating genome-quality assessment, genome-based taxonomy, phylogenomics, comparative genomics and environmental metadata to investigate genomic diversity across *Chroococcidiopsis* and related extremophilic cyanobacterial lineages.
 
-**Data source:** Public dataset from NCBI Sequence Read Archive.
-
-**My contribution:** Bioinformatic analysis, workflow design, interpretation and documentation.
-
-[View full project →](projects/chroococcidiopsis-wgs/index.qmd)
+[View project](projects/chroococcidiopsales-ecogenomics/)
 
 ### Comparative Genomics and Functional Characterization of *Lactiplantibacillus plantarum* E2C2
 
