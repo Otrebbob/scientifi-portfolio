@@ -165,6 +165,31 @@ div.csl-indent {
   <li><a href="#characterize-conserved-and-variable-genomic-features" id="toc-characterize-conserved-and-variable-genomic-features" class="nav-link" data-scroll-target="#characterize-conserved-and-variable-genomic-features">3. Characterize conserved and variable genomic features</a></li>
   <li><a href="#integrate-genomic-and-ecological-information" id="toc-integrate-genomic-and-ecological-information" class="nav-link" data-scroll-target="#integrate-genomic-and-ecological-information">4. Integrate genomic and ecological information</a></li>
   </ul></li>
+  <li><a href="#dataset-construction" id="toc-dataset-construction" class="nav-link" data-scroll-target="#dataset-construction">Dataset construction</a>
+  <ul class="collapse">
+  <li><a href="#curated-genomic-dataset" id="toc-curated-genomic-dataset" class="nav-link" data-scroll-target="#curated-genomic-dataset">Curated genomic dataset</a></li>
+  <li><a href="#genome-census" id="toc-genome-census" class="nav-link" data-scroll-target="#genome-census">Genome census</a></li>
+  </ul></li>
+  <li><a href="#environmental-metadata-integration" id="toc-environmental-metadata-integration" class="nav-link" data-scroll-target="#environmental-metadata-integration">Environmental metadata integration</a>
+  <ul class="collapse">
+  <li><a href="#lithic-and-desert-associated-genomes" id="toc-lithic-and-desert-associated-genomes" class="nav-link" data-scroll-target="#lithic-and-desert-associated-genomes">Lithic and desert-associated genomes</a></li>
+  </ul></li>
+  <li><a href="#genome-quality-assessment" id="toc-genome-quality-assessment" class="nav-link" data-scroll-target="#genome-quality-assessment">Genome-quality assessment</a>
+  <ul class="collapse">
+  <li><a href="#quality-filtering-before-phylogenomics" id="toc-quality-filtering-before-phylogenomics" class="nav-link" data-scroll-target="#quality-filtering-before-phylogenomics">Quality filtering before phylogenomics</a></li>
+  </ul></li>
+  <li><a href="#taxonomic-reconciliation" id="toc-taxonomic-reconciliation" class="nav-link" data-scroll-target="#taxonomic-reconciliation">Taxonomic reconciliation</a>
+  <ul class="collapse">
+  <li><a href="#gtdb-comparison" id="toc-gtdb-comparison" class="nav-link" data-scroll-target="#gtdb-comparison">GTDB comparison</a></li>
+  <li><a href="#differences-between-classification-systems" id="toc-differences-between-classification-systems" class="nav-link" data-scroll-target="#differences-between-classification-systems">Differences between classification systems</a></li>
+  <li><a href="#implications-for-downstream-analysis" id="toc-implications-for-downstream-analysis" class="nav-link" data-scroll-target="#implications-for-downstream-analysis">Implications for downstream analysis</a></li>
+  </ul></li>
+  <li><a href="#phylogenomic-reconstruction" id="toc-phylogenomic-reconstruction" class="nav-link" data-scroll-target="#phylogenomic-reconstruction">Phylogenomic reconstruction</a>
+  <ul class="collapse">
+  <li><a href="#maximum-likelihood-inference" id="toc-maximum-likelihood-inference" class="nav-link" data-scroll-target="#maximum-likelihood-inference">Maximum-likelihood inference</a></li>
+  <li><a href="#tree-rooting" id="toc-tree-rooting" class="nav-link" data-scroll-target="#tree-rooting">Tree rooting</a></li>
+  </ul></li>
+  <li><a href="#current-project-status" id="toc-current-project-status" class="nav-link" data-scroll-target="#current-project-status">Current project status</a></li>
   </ul>
 </nav>
     </div>
@@ -191,12 +216,12 @@ div.csl-indent {
 
 
 <p><strong>Project status:</strong> Ongoing<br>
-<strong>Last update:</strong> September 2026</p>
+<strong>Last update:</strong> 08 September 2026</p>
 <section id="project-overview" class="level2">
 <h2 class="anchored" data-anchor-id="project-overview">Project overview</h2>
-<p>This independent project explores the <strong>genomic, taxonomic and ecological diversity of Chroococcidiopsidales</strong>, with particular attention to <em>Chroococcidiopsis</em> and related cyanobacterial lineages associated with extreme terrestrial environments.</p>
-<p>The study uses publicly available genomic resources together with environmental metadata to investigate diversity at a broader scale than single-strain genome characterization.</p>
-<p>The central idea is to integrate:</p>
+<p>This independent project explores the <strong>genomic, taxonomic and ecological diversity of Chroococcidiopsidales</strong>, with particular attention to <em>Chroococcidiopsis</em> and related cyanobacterial lineages occurring across diverse terrestrial and aquatic environments.</p>
+<p>The study integrates publicly available genome assemblies with environmental metadata to investigate genomic diversity at a broader scale than single-strain characterization.</p>
+<p>The analytical framework combines:</p>
 <ul>
 <li>genome quality assessment</li>
 <li>genome-based taxonomy</li>
@@ -206,52 +231,55 @@ div.csl-indent {
 <li>functional annotation</li>
 <li>environmental metadata</li>
 </ul>
-<p>into a single ecogenomic framework.</p>
-<p>Members of <em>Chroococcidiopsis</em> are particularly interesting because several strains have been isolated from hot and cold desert lithic environments and have been extensively studied for their ability to tolerate desiccation, radiation and other extreme conditions <span class="citation" data-cites="billi2000radiation rigano2026chroococcidiopsis">(<a href="#ref-billi2000radiation" role="doc-biblioref">Billi et al. 2000</a>; <a href="#ref-rigano2026chroococcidiopsis" role="doc-biblioref">Rigano and Billi 2026</a>)</span>.</p>
-<p>Recent comparative genomic work on <em>Chroococcidiopsis</em> sp. CCMEE 029, CCMEE 057 and CCMEE 064 showed that closely related desert strains share a substantial conserved genomic repertoire while also retaining strain-specific differences in metabolic and stress-associated functions <span class="citation" data-cites="rigano2026chroococcidiopsis">(<a href="#ref-rigano2026chroococcidiopsis" role="doc-biblioref">Rigano and Billi 2026</a>)</span>.</p>
-<p>However, publicly available genomic databases now contain a broader collection of cultured isolates, environmental genomes and single-cell genomes assigned to <em>Chroococcidiopsis</em> and related lineages.</p>
-<p>Some of these genomes are associated with detailed environmental metadata, including geographic origin, substrate and ecosystem characteristics. For example, publicly available JGI records include <em>Chroococcidiopsis</em> genomes recovered from rock-dwelling communities associated with gypsum substrates in the Atacama Desert <span class="citation" data-cites="jgiSAGGYP7 jgiSAGGYP10">(<a href="#ref-jgiSAGGYP7" role="doc-biblioref">DOE Joint Genome Institute 2023b</a>, <a href="#ref-jgiSAGGYP10" role="doc-biblioref">2023a</a>)</span>.</p>
-<p>This creates an opportunity to move from the comparison of a few experimentally characterized strains toward a broader <strong>ecogenomic investigation of Chroococcidiopsidales diversity</strong>.</p>
-<p>The project therefore asks a central question:</p>
+<p>into a single ecogenomic workflow.</p>
+<p>Members of <em>Chroococcidiopsis</em> are particularly interesting because several strains isolated from hot and cold desert lithic environments have been investigated for their ability to tolerate desiccation, ionizing radiation and other extreme environmental stresses <span class="citation" data-cites="billi2000radiation rigano2026chroococcidiopsis">(<a href="#ref-billi2000radiation" role="doc-biblioref">Billi et al. 2000</a>; <a href="#ref-rigano2026chroococcidiopsis" role="doc-biblioref">Rigano and Billi 2026</a>)</span>.</p>
+<p>Global studies have also shown that desert cyanobacterial lineages can display strong biogeographic and ecological structuring across hot and cold desert environments <span class="citation" data-cites="bahl2011biogeography">(<a href="#ref-bahl2011biogeography" role="doc-biblioref">Bahl et al. 2011</a>)</span>.</p>
+<p>More recently, comparative genomic analyses of <em>Chroococcidiopsis</em> sp. CCMEE 029, CCMEE 057 and CCMEE 064 identified a substantial conserved genomic repertoire together with strain-specific differences affecting metabolic and stress-associated functions <span class="citation" data-cites="rigano2026chroococcidiopsis">(<a href="#ref-rigano2026chroococcidiopsis" role="doc-biblioref">Rigano and Billi 2026</a>)</span>.</p>
+<p>At the same time, genomic resources now include a broader collection of cultured isolates, environmental genomes and metagenome-assembled genomes assigned to <em>Chroococcidiopsis</em> and related cyanobacterial lineages.</p>
+<p>Some of these genomes are associated with environmental information describing geographic origin, habitat, substrate or ecological context.</p>
+<p>This creates an opportunity to move from the comparison of a few experimentally characterized strains toward a broader <strong>ecogenomic investigation of genomic diversity across Chroococcidiopsidales</strong>.</p>
+<p>The project therefore addresses the central question:</p>
 <blockquote class="blockquote">
 <p><strong>How is genomic diversity within Chroococcidiopsidales structured across evolutionary lineages and environmental contexts?</strong></p>
 </blockquote>
-<p>Rather than assuming that particular genes directly explain ecological adaptation, the analysis aims to identify genomic and ecological associations that can generate biologically testable hypotheses.</p>
+<p>Rather than assuming that individual genes directly explain ecological adaptation, the project aims to identify genomic and ecological associations that can generate biologically testable hypotheses.</p>
 <hr>
 </section>
 <section id="scientific-background" class="level2">
 <h2 class="anchored" data-anchor-id="scientific-background">Scientific background</h2>
-<p>Cyanobacteria represent a highly diverse group of photosynthetic microorganisms capable of colonizing a wide range of environments.</p>
-<p>Within this diversity, <em>Chroococcidiopsis</em> has attracted particular attention because of the extraordinary stress tolerance reported for several desert-derived strains.</p>
-<p>Experimental studies have demonstrated substantial resistance to desiccation and ionizing radiation in <em>Chroococcidiopsis</em>, making members of the genus important models for investigating microbial survival under extreme environmental conditions <span class="citation" data-cites="billi2000radiation">(<a href="#ref-billi2000radiation" role="doc-biblioref">Billi et al. 2000</a>)</span>.</p>
+<p>Cyanobacteria represent a phylogenetically and ecologically diverse group of photosynthetic microorganisms capable of colonizing a wide variety of environments.</p>
+<p>Within this diversity, <em>Chroococcidiopsis</em> has received particular attention because several desert-derived strains display remarkable tolerance to environmental stress.</p>
+<p>Experimental work has demonstrated substantial resistance to desiccation and ionizing radiation in <em>Chroococcidiopsis</em>, contributing to its use as a model for investigating microbial survival under extreme conditions <span class="citation" data-cites="billi2000radiation">(<a href="#ref-billi2000radiation" role="doc-biblioref">Billi et al. 2000</a>)</span>.</p>
+<p>Studies of cyanobacteria from hot and cold deserts have additionally revealed large-scale biogeographic patterns, suggesting that evolutionary history and environmental specialization both contribute to the present distribution of desert cyanobacterial lineages <span class="citation" data-cites="bahl2011biogeography">(<a href="#ref-bahl2011biogeography" role="doc-biblioref">Bahl et al. 2011</a>)</span>.</p>
 <p>More recent genomic analyses have expanded this perspective.</p>
-<p>Comparative genomics of the desert strains CCMEE 029, CCMEE 057 and CCMEE 064 identified conserved systems potentially associated with:</p>
+<p>Comparative genomics of CCMEE 029, CCMEE 057 and CCMEE 064 identified conserved systems associated with several functional categories relevant to environmental stress, including:</p>
 <ul>
-<li>desiccation response</li>
 <li>compatible-solute metabolism</li>
 <li>DNA protection and repair</li>
-<li>oxidative-stress defence</li>
+<li>oxidative-stress response</li>
 <li>photoprotection</li>
 </ul>
-<p>while also revealing genomic differences among individual strains <span class="citation" data-cites="rigano2026chroococcidiopsis">(<a href="#ref-rigano2026chroococcidiopsis" role="doc-biblioref">Rigano and Billi 2026</a>)</span>.</p>
-<p>These observations suggest that extreme-environment survival may involve both a <strong>conserved stress-response repertoire</strong> and lineage-specific genomic characteristics.</p>
+<p>while also revealing differences among individual genomes <span class="citation" data-cites="rigano2026chroococcidiopsis">(<a href="#ref-rigano2026chroococcidiopsis" role="doc-biblioref">Rigano and Billi 2026</a>)</span>.</p>
+<p>Far-red light photoacclimation represents another particularly interesting example of potential ecological differentiation within Chroococcidiopsidales.</p>
+<p>Comparative work has suggested repeated loss of the FaRLiP genomic repertoire in several desert-specialized lineages, providing a useful framework for investigating relationships between photosynthetic potential, phylogeny and habitat <span class="citation" data-cites="antonaru2023farlip">(<a href="#ref-antonaru2023farlip" role="doc-biblioref"><span class="nocase">Antonaru et al.</span> 2023</a>)</span>.</p>
+<p>These observations suggest that environmental specialization may involve both a <strong>conserved physiological repertoire</strong> and lineage-specific genomic changes.</p>
 <p>At the same time, genome-based taxonomy has substantially changed how bacterial evolutionary relationships are investigated.</p>
-<p>Resources such as the Genome Taxonomy Database use genome-scale phylogenetic information to construct a standardized bacterial and archaeal taxonomy <span class="citation" data-cites="parks2018gtdb parks2020taxonomy parks2022gtdb">(<a href="#ref-parks2018gtdb" role="doc-biblioref">Parks et al. 2018</a>, <a href="#ref-parks2020taxonomy" role="doc-biblioref">2020</a>, <a href="#ref-parks2022gtdb" role="doc-biblioref">2022</a>)</span>.</p>
-<p>This is particularly relevant for cyanobacteria because traditional names, database assignments and genome-based classifications do not always describe evolutionary diversity in exactly the same way.</p>
-<p>For this reason, this project does not treat the existing taxonomic label of each genome as an unquestionable biological identity.</p>
+<p>The Genome Taxonomy Database provides a standardized framework derived largely from genome-scale phylogenetic relationships <span class="citation" data-cites="parks2018gtdb parks2020taxonomy parks2022gtdb">(<a href="#ref-parks2018gtdb" role="doc-biblioref">Parks et al. 2018</a>, <a href="#ref-parks2020taxonomy" role="doc-biblioref">2020</a>, <a href="#ref-parks2022gtdb" role="doc-biblioref">2022</a>)</span>.</p>
+<p>This is particularly relevant for cyanobacteria because historical nomenclature, public database assignments and genome-based classifications are not always fully congruent.</p>
+<p>For this reason, this project does not treat the existing taxonomic name of each genome as an unquestionable biological identity.</p>
 <p>Instead, taxonomic information is evaluated together with:</p>
 <ul>
 <li>genome quality</li>
+<li>genome-based classification</li>
 <li>phylogenomic placement</li>
 <li>genome-wide similarity</li>
 <li>environmental origin</li>
 </ul>
 <p>before comparative biological interpretation.</p>
-<p>A further opportunity comes from the increasing availability of environmental and single-cell genomic datasets.</p>
-<p>For example, JGI genomic records assigned to <em>Chroococcidiopsis</em> include uncultured organisms associated with terrestrial rock-dwelling communities from the Atacama Desert, with metadata describing gypsum substrates, geographic coordinates and elevation <span class="citation" data-cites="jgiSAGGYP7 jgiSAGGYP10">(<a href="#ref-jgiSAGGYP7" role="doc-biblioref">DOE Joint Genome Institute 2023b</a>, <a href="#ref-jgiSAGGYP10" role="doc-biblioref">2023a</a>)</span>.</p>
-<p>Such records provide a direct connection between <strong>genome and habitat</strong>.</p>
-<p>This connection forms the basis of the ecogenomic component of the project.</p>
-<p>Instead of analysing genome variation independently of environmental origin, the objective is to investigate whether phylogenetic and genomic patterns correspond to differences in ecological context.</p>
+<p>The increasing availability of environmental genomes and MAGs provides an additional opportunity.</p>
+<p>Genomic datasets can now be linked to ecological information describing environments such as deserts, lithic habitats, freshwater systems, marine environments, geothermal sites and polar environments.</p>
+<p>This connection between <strong>genome and habitat</strong> forms the basis of the ecogenomic component of the project.</p>
+<p>Instead of analysing genomic variation independently of environmental origin, the objective is to investigate whether genomic and phylogenetic patterns correspond to differences in ecological context.</p>
 <hr>
 </section>
 <section id="project-objectives" class="level2">
@@ -269,8 +297,8 @@ div.csl-indent {
 <li>sequencing strategy</li>
 <li>biological origin</li>
 </ul>
-<p>This is particularly important when working with single-cell and environmental genomes, where incomplete assemblies or contamination can strongly influence downstream analyses.</p>
-<p>Genome-quality assessment therefore precedes phylogenomic and comparative analyses.</p>
+<p>This is particularly important when working with MAGs and other environmental genomes, where incomplete assemblies or contamination can influence downstream estimates of gene presence and absence.</p>
+<p>Genome-quality assessment therefore precedes comparative biological interpretation.</p>
 </section>
 <section id="investigate-genomic-taxonomy-and-evolutionary-relationships" class="level3">
 <h3 class="anchored" data-anchor-id="investigate-genomic-taxonomy-and-evolutionary-relationships">2. Investigate genomic taxonomy and evolutionary relationships</h3>
@@ -279,56 +307,815 @@ div.csl-indent {
 <ul>
 <li>closely related genomic clusters</li>
 <li>divergent lineages</li>
-<li>possible inconsistencies between classifications</li>
+<li>inconsistencies between classification systems</li>
 <li>relationships that may not be apparent from historical species or genus labels</li>
 </ul>
 <p>Genome-based taxonomy is therefore treated as an analytical component rather than simply copied from database annotations <span class="citation" data-cites="parks2018gtdb parks2020taxonomy parks2022gtdb">(<a href="#ref-parks2018gtdb" role="doc-biblioref">Parks et al. 2018</a>, <a href="#ref-parks2020taxonomy" role="doc-biblioref">2020</a>, <a href="#ref-parks2022gtdb" role="doc-biblioref">2022</a>)</span>.</p>
 </section>
 <section id="characterize-conserved-and-variable-genomic-features" class="level3">
 <h3 class="anchored" data-anchor-id="characterize-conserved-and-variable-genomic-features">3. Characterize conserved and variable genomic features</h3>
-<p>The third objective is to compare gene content and functional potential across the selected genomes.</p>
-<p>Particular attention will be given to systems potentially relevant to survival in extreme terrestrial environments, including:</p>
+<p>The third objective is to compare gene content and functional potential across selected genomes.</p>
+<p>Particular attention will be given to systems potentially relevant to survival and specialization in contrasting environments, including:</p>
 <ul>
 <li>desiccation-associated functions</li>
 <li>osmoprotection</li>
 <li>DNA protection and repair</li>
 <li>oxidative-stress defence</li>
+<li>photosynthetic adaptation</li>
 <li>photoprotection</li>
 <li>extracellular and cell-surface functions</li>
 </ul>
-<p>Previous work on CCMEE 029, CCMEE 057 and CCMEE 064 provides a useful biological framework for defining several of these functional categories <span class="citation" data-cites="rigano2026chroococcidiopsis">(<a href="#ref-rigano2026chroococcidiopsis" role="doc-biblioref">Rigano and Billi 2026</a>)</span>.</p>
-<p>The broader dataset will allow these traits to be investigated across a larger evolutionary context.</p>
+<p>Previous comparative work on desert <em>Chroococcidiopsis</em> provides a biological framework for several of these functional categories <span class="citation" data-cites="rigano2026chroococcidiopsis antonaru2023farlip">(<a href="#ref-rigano2026chroococcidiopsis" role="doc-biblioref">Rigano and Billi 2026</a>; <a href="#ref-antonaru2023farlip" role="doc-biblioref"><span class="nocase">Antonaru et al.</span> 2023</a>)</span>.</p>
 </section>
 <section id="integrate-genomic-and-ecological-information" class="level3">
 <h3 class="anchored" data-anchor-id="integrate-genomic-and-ecological-information">4. Integrate genomic and ecological information</h3>
 <p>The final objective is to connect genomic variation with environmental metadata.</p>
-<p>Where available, each genome will be associated with information describing:</p>
+<p>Where available, each genome is associated with information describing:</p>
 <ul>
 <li>geographic origin</li>
 <li>ecosystem type</li>
 <li>substrate</li>
-<li>elevation</li>
+<li>lithic lifestyle</li>
 <li>cultivation status</li>
 <li>environmental source</li>
 </ul>
 <p>The aim is to determine whether genomic and phylogenetic patterns show associations with ecological characteristics.</p>
 <p>These associations will be interpreted as <strong>hypothesis-generating ecogenomic patterns</strong>, not as direct demonstrations of physiological adaptation.</p>
-<p>Experimental validation would ultimately be required to establish causal links between genomic traits and environmental phenotypes.</p>
-
-
-
+<p>Experimental validation would ultimately be required to establish causal relationships between genomic traits and environmental phenotypes.</p>
+<hr>
 </section>
+</section>
+<section id="dataset-construction" class="level2">
+<h2 class="anchored" data-anchor-id="dataset-construction">Dataset construction</h2>
+<p>A systematic dataset-construction strategy was used rather than selecting genomes manually.</p>
+<p>The initial search targeted the entire <strong>Chroococcidiopsidales</strong> group rather than only the genus <em>Chroococcidiopsis</em>.</p>
+<p>Public genomic records were collected from multiple sources, including NCBI, ENA and external repositories associated with published studies.</p>
+<p>This multi-source strategy was necessary because biologically relevant genomes are not always represented by conventional NCBI Assembly records.</p>
+<p>For example, recently reconstructed genomes of CCMEE 057 and CCMEE 064 were obtained through resources associated with their published comparative-genomics study <span class="citation" data-cites="rigano2026chroococcidiopsis">(<a href="#ref-rigano2026chroococcidiopsis" role="doc-biblioref">Rigano and Billi 2026</a>)</span>.</p>
+<section id="curated-genomic-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="curated-genomic-dataset">Curated genomic dataset</h3>
+<p>The curated working dataset contains <strong>64 non-redundant genomes</strong>, including cultured isolates and environmental MAGs recovered from multiple public repositories.</p>
+<p>For each genome, genomic provenance was integrated with standardized environmental metadata describing geographic origin, habitat, lithic lifestyle and substrate.</p>
+<section id="genome-accessions-used-in-the-current-dataset" class="level4">
+<h4 class="anchored" data-anchor-id="genome-accessions-used-in-the-current-dataset">Genome accessions used in the current dataset</h4>
+<p>The table below lists the genomes currently included in the project together with their primary assembly or repository accession.</p>
+</section>
+<section id="genome-accessions-used-in-the-current-dataset-1" class="level4">
+<h4 class="anchored" data-anchor-id="genome-accessions-used-in-the-current-dataset-1">Genome accessions used in the current dataset</h4>
+<p>The table below lists the <strong>64 non-redundant genomes</strong> currently included in the project together with their primary assembly or repository accession.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dataset ID</th>
+<th>Organism</th>
+<th>Accession</th>
+<th>Repository</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1H9</td>
+<td><em>Gloeocapsopsis dulcis</em> AAB1 = 1H9</td>
+<td>GCF_009728615.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="even">
+<td>5.2 s.c.1</td>
+<td><em>Chroogloeocystis siderophila</em> 5.2 s.c.1</td>
+<td>GCF_001904655.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="odd">
+<td>AAB1</td>
+<td><em>Gloeocapsopsis dulcis</em></td>
+<td>GCF_032163395.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="even">
+<td>Aliterella_sp._RAGGC_92</td>
+<td><em>Aliterella</em> sp. RAGGC_92</td>
+<td>GCA_030826005.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="odd">
+<td>Aliterella_sp.</td>
+<td><em>Aliterella</em> sp.</td>
+<td>GCA_043731345.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="even">
+<td>Atacama_Ca09</td>
+<td><em>Gloeocapsa</em> sp.</td>
+<td>Figshare 3568436</td>
+<td>Figshare</td>
+</tr>
+<tr class="odd">
+<td>Atacama_Ig12</td>
+<td><em>Chroococcidiopsis</em> sp.</td>
+<td>Figshare 3568433</td>
+<td>Figshare</td>
+</tr>
+<tr class="even">
+<td>BRSZ</td>
+<td><em>Gloeocapsa</em> sp. BRSZ</td>
+<td>GCF_040328315.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="odd">
+<td>CCALA 043</td>
+<td><em>Chroococcidiopsis cubana</em> CCALA 043</td>
+<td>GCF_003003835.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="even">
+<td>CCALA 051</td>
+<td><em>Chroococcidiopsis</em> sp. CCALA 051</td>
+<td>GCF_003015105.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="odd">
+<td>CCMEE_057</td>
+<td><em>Chroococcidiopsis</em> sp. CCMEE 057</td>
+<td>PRJNA1414258</td>
+<td>GitHub / NCBI BioProject</td>
+</tr>
+<tr class="even">
+<td>CCMEE_064</td>
+<td><em>Chroococcidiopsis</em> sp. CCMEE 064</td>
+<td>PRJNA1414258</td>
+<td>GitHub / NCBI BioProject</td>
+</tr>
+<tr class="odd">
+<td>CCMEE 29</td>
+<td><em>Chroococcidiopsis</em> sp. CCMEE 029</td>
+<td>GCF_023558375.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="even">
+<td>CCNUC1</td>
+<td><em>Chroococcidiopsis</em> sp. CCNUC1</td>
+<td>GCF_023546805.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="odd">
+<td>CENA595</td>
+<td><em>Aliterella atlantica</em> CENA595</td>
+<td>GCF_000952155.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="even">
+<td>CP_BM_ER_R8_30</td>
+<td>Chroococcidiopsidaceae cyanobacterium</td>
+<td>GCA_019244235.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="odd">
+<td>CP_BM_RX_35</td>
+<td>Chroococcidiopsidaceae cyanobacterium</td>
+<td>GCA_019242465.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="even">
+<td>YX2bin18</td>
+<td>Chroococcidiopsidaceae cyanobacterium</td>
+<td>GCA_030446505.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="odd">
+<td>Chroococcidiopsidaceae_cyanobacterium</td>
+<td>Chroococcidiopsidaceae cyanobacterium</td>
+<td>GCA_041748755.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="even">
+<td>Chroococcidiopsis_cubana_SAG_39.79</td>
+<td><em>Chroococcidiopsis cubana</em> SAG 39.79</td>
+<td>GCF_034438355.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="odd">
+<td>HW-12_bin.40</td>
+<td><em>Chroococcidiopsis edaphicus</em></td>
+<td>ERZ28674869</td>
+<td>ENA</td>
+</tr>
+<tr class="even">
+<td>S29-31_bin.60</td>
+<td><em>Chroococcidiopsis rifticola</em></td>
+<td>ERZ28674876</td>
+<td>ENA</td>
+</tr>
+<tr class="odd">
+<td>CTOTU21509</td>
+<td><em>Chroococcidiopsis</em> sp. CTOTU21509</td>
+<td>GCA_036780185.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="even">
+<td>MAG_Ve_Sed_48</td>
+<td><em>Chroococcidiopsis</em> sp. MAG_Ve_Sed_48</td>
+<td>GCA_029287295.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="odd">
+<td>SAG 2025</td>
+<td><em>Chroococcidiopsis</em> sp. SAG 2025</td>
+<td>GCF_032860985.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="even">
+<td>Chroococcidiopsis_sp._1</td>
+<td><em>Chroococcidiopsis</em> sp.</td>
+<td>GCA_036703515.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="odd">
+<td>Chroococcidiopsis_sp._2</td>
+<td><em>Chroococcidiopsis</em> sp.</td>
+<td>GCA_051649385.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="even">
+<td>Chroococcidiopsis_sp._3</td>
+<td><em>Chroococcidiopsis</em> sp.</td>
+<td>GCF_051657925.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="odd">
+<td>E5.1</td>
+<td><em>Aliterella</em> sp. E5.1</td>
+<td>GCF_057473825.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="even">
+<td>FACHB-1243</td>
+<td><em>Chroococcidiopsis</em> sp. FACHB-1243</td>
+<td>GCF_014696895.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="odd">
+<td>GCA_983415235</td>
+<td><em>Aliterella</em> sp.</td>
+<td>GCA_983415235</td>
+<td>ENA</td>
+</tr>
+<tr class="even">
+<td>GCA_987222895</td>
+<td><em>Chroococcidiopsis</em> sp.</td>
+<td>GCA_987222895</td>
+<td>ENA</td>
+</tr>
+<tr class="odd">
+<td>GCA_987224135</td>
+<td><em>Chroococcidiopsis</em> sp.</td>
+<td>GCA_987224135</td>
+<td>ENA</td>
+</tr>
+<tr class="even">
+<td>GCA_987235775</td>
+<td><em>Chroococcidiopsis</em> sp.</td>
+<td>GCA_987235775</td>
+<td>ENA</td>
+</tr>
+<tr class="odd">
+<td>GCA_987243285</td>
+<td><em>Chroococcidiopsis</em> sp.</td>
+<td>GCA_987243285</td>
+<td>ENA</td>
+</tr>
+<tr class="even">
+<td>DLM2.Bin57</td>
+<td><em>Gloeocapsa</em> sp. DLM2.Bin57</td>
+<td>GCA_007693955.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="odd">
+<td>UFS-A4-WI-NPMV-4B04</td>
+<td><em>Gloeocapsa</em> sp.</td>
+<td>GCA_019359535.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="even">
+<td>Gloeocapsa_sp.</td>
+<td><em>Gloeocapsa</em> sp.</td>
+<td>GCA_059505865.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="odd">
+<td>Gloeocapsopsis_crepidinum</td>
+<td><em>Gloeocapsopsis crepidinum</em></td>
+<td>GCF_051861225.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="even">
+<td>IPPAS B-1203</td>
+<td><em>Gloeocapsopsis</em> sp. IPPAS B-1203</td>
+<td>GCF_002749975.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="odd">
+<td>LEGE 06123</td>
+<td><em>Gloeocapsopsis crepidinum</em> LEGE 06123</td>
+<td>GCF_015207655.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="even">
+<td>LEGE 13417</td>
+<td>Chroococcidiopsidales cyanobacterium LEGE 13417</td>
+<td>GCA_015206905.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="odd">
+<td>MGYG000509507</td>
+<td><em>Chroococcidiopsis</em> sp.</td>
+<td>DATNQH000000000</td>
+<td>MGnify / NCBI</td>
+</tr>
+<tr class="even">
+<td>MGYG000513892</td>
+<td>Chroococcidiopsidaceae cyanobacterium</td>
+<td>ERZ27306893</td>
+<td>MGnify / ENA</td>
+</tr>
+<tr class="odd">
+<td>PCC 7203</td>
+<td><em>Chroococcidiopsis thermalis</em> PCC 7203</td>
+<td>GCF_000317125.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="even">
+<td>PCC 73106</td>
+<td><em>Gloeocapsa</em> sp. PCC 73106</td>
+<td>GCF_000332035.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="odd">
+<td>PCC 7428</td>
+<td><em>Gloeocapsa</em> sp. PCC 7428</td>
+<td>GCF_000317555.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="even">
+<td>PCC 7434</td>
+<td><em>Chroococcidiopsis</em> sp. PCC 7434</td>
+<td>External repository record</td>
+<td>Zenodo / Dryad</td>
+</tr>
+<tr class="odd">
+<td>PCC 8201</td>
+<td><em>Chroococcidiopsis</em> sp. PCC 8201</td>
+<td>External repository record</td>
+<td>Zenodo / Dryad</td>
+</tr>
+<tr class="even">
+<td>SAG 39.79</td>
+<td><em>Chroococcidiopsis cubana</em> SAG 39.79</td>
+<td>GCF_003991895.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="odd">
+<td>TS-821</td>
+<td><em>Chroococcidiopsis</em> sp. TS-821</td>
+<td>GCF_002939305.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="even">
+<td>glCalLitt1</td>
+<td>Chroococcidiopsidaceae cyanobacterium</td>
+<td>ERZ26692383</td>
+<td>ENA</td>
+</tr>
+<tr class="odd">
+<td>glMasCarn1</td>
+<td>Chroococcidiopsidaceae cyanobacterium</td>
+<td>ERZ25071620</td>
+<td>ENA</td>
+</tr>
+<tr class="even">
+<td>ignimbrite01</td>
+<td><em>Chroococcidiopsis</em>-related MAG</td>
+<td>External Figshare record</td>
+<td>Figshare</td>
+</tr>
+<tr class="odd">
+<td>ignimbrite12</td>
+<td><em>Chroococcidiopsis</em>-related MAG</td>
+<td>External Figshare record</td>
+<td>Figshare</td>
+</tr>
+<tr class="even">
+<td>GCA_967150955</td>
+<td><em>Gloeocapsa</em> sp.</td>
+<td>GCA_967150955</td>
+<td>ENA</td>
+</tr>
+<tr class="odd">
+<td>GCA_974036155</td>
+<td><em>Aliterella</em> sp.</td>
+<td>GCA_974036155</td>
+<td>ENA</td>
+</tr>
+<tr class="even">
+<td>GCA_966883625</td>
+<td><em>Aliterella</em> sp.</td>
+<td>GCA_966883625</td>
+<td>ENA</td>
+</tr>
+<tr class="odd">
+<td>GCA_966681095</td>
+<td><em>Aliterella</em> sp.</td>
+<td>GCA_966681095</td>
+<td>ENA</td>
+</tr>
+<tr class="even">
+<td>GCA_969110115</td>
+<td><em>Aliterella</em> sp.</td>
+<td>GCA_969110115</td>
+<td>ENA</td>
+</tr>
+<tr class="odd">
+<td>uncultured_Aliterella_sp.</td>
+<td>uncultured <em>Aliterella</em> sp.</td>
+<td>GCA_905479905.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="even">
+<td>uncultured_Chroococcidiopsis_sp._1</td>
+<td>uncultured <em>Chroococcidiopsis</em> sp.</td>
+<td>GCA_937128765.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="odd">
+<td>uncultured_Chroococcidiopsis_sp._2</td>
+<td>uncultured <em>Chroococcidiopsis</em> sp.</td>
+<td>GCA_964248365.1</td>
+<td>NCBI</td>
+</tr>
+<tr class="even">
+<td>uncultured_Gloeocapsa_sp.</td>
+<td>uncultured <em>Gloeocapsa</em> sp.</td>
+<td>GCA_937930495.1</td>
+<td>NCBI</td>
+</tr>
+</tbody>
+</table>
+<p><em>For genomes without a conventional GCA/GCF accession, the primary repository or analysis identifier is reported instead. These records are retained because their genome assemblies were obtained from public external repositories used during dataset construction.</em></p>
+<p>For genomes without a conventional GCA/GCF identifier, the corresponding ENA analysis accession, repository identifier or study-associated record is reported instead.</p>
+</section>
+</section>
+<section id="genome-census" class="level3">
+<h3 class="anchored" data-anchor-id="genome-census">Genome census</h3>
+<p>Genome collection was performed as a multi-source census rather than through a single database query.</p>
+<p>The complete inventory initially contained <strong>101 candidate genomic records</strong> identified across NCBI, ENA and external repositories.</p>
+<p>At the inventory stage, records were classified according to their accessibility:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Dataset status</th>
+<th style="text-align: right;">Records</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Available</td>
+<td style="text-align: right;">64</td>
+</tr>
+<tr class="even">
+<td>Login required</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="odd">
+<td>To check</td>
+<td style="text-align: right;">21</td>
+</tr>
+<tr class="even">
+<td>To locate</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="odd">
+<td><strong>Total candidates</strong></td>
+<td style="text-align: right;"><strong>101</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>64 immediately available records</strong> formed the initial operational dataset, while unresolved records were retained in the inventory for traceability and possible future inclusion.</p>
+<p>Genome acquisition was subsequently expanded through additional external repositories and publication-associated resources.</p>
+<p>This produced a working collection of <strong>73 genomic FASTA files</strong>.</p>
+<p>Sequence-level comparison identified <strong>8 identical genome assemblies</strong>, which were removed.</p>
+<p>A further redundant assembly representing the same biological strain was excluded by retaining the more appropriate assembly for downstream analysis.</p>
+<p>The resulting curated collection contained:</p>
+<p><strong>64 non-redundant genomes</strong></p>
+<p>which were carried forward to genome-quality assessment, taxonomic reconciliation and phylogenomic analysis.</p>
+<hr>
+</section>
+</section>
+<section id="environmental-metadata-integration" class="level2">
+<h2 class="anchored" data-anchor-id="environmental-metadata-integration">Environmental metadata integration</h2>
+<p>Environmental metadata were collected separately from genome sequences and subsequently integrated into the curated dataset.</p>
+<p>Information was recovered from sample records, ENA metadata, repository documentation and original publications where necessary.</p>
+<p>Because environmental descriptions are frequently reported using inconsistent terminology, raw metadata were standardized into a smaller set of comparable ecological variables.</p>
+<p>These include:</p>
+<ul>
+<li>geographic origin</li>
+<li>habitat</li>
+<li>habitat subtype</li>
+<li>climate</li>
+<li>lithic lifestyle</li>
+<li>substrate</li>
+<li>aquatic environment</li>
+<li>sample origin</li>
+<li>cultivation status</li>
+</ul>
+<p>The resulting dataset spans a broad ecological range rather than representing only desert-associated cyanobacteria.</p>
+<p>Environmental contexts currently represented include:</p>
+<ul>
+<li>hot and hyper-arid deserts</li>
+<li>cold and polar deserts</li>
+<li>endolithic and hypolithic rock communities</li>
+<li>biological soil crusts</li>
+<li>freshwater systems</li>
+<li>marine environments</li>
+<li>sediments</li>
+<li>geothermal environments</li>
+<li>glacier-associated environments</li>
+<li>terrestrial soils and rocks</li>
+<li>host-associated samples</li>
+</ul>
+<p>This ecological heterogeneity provides the environmental contrasts required for subsequent comparative analyses.</p>
+<section id="lithic-and-desert-associated-genomes" class="level3">
+<h3 class="anchored" data-anchor-id="lithic-and-desert-associated-genomes">Lithic and desert-associated genomes</h3>
+<p>Several genomes in the dataset originate from well-characterized lithic environments.</p>
+<p>Three particularly informative strains are:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Strain</th>
+<th>Geographic origin</th>
+<th>Lithic niche</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CCMEE 029</td>
+<td>Negev Desert</td>
+<td>Cryptoendolithic</td>
+</tr>
+<tr class="even">
+<td>CCMEE 057</td>
+<td>Sinai Desert</td>
+<td>Chasmoendolithic</td>
+</tr>
+<tr class="odd">
+<td>CCMEE 064</td>
+<td>Sinai Desert</td>
+<td>Hypolithic</td>
+</tr>
+</tbody>
+</table>
+<p>These strains have previously been investigated comparatively at the genomic level and provide useful biological references for interpreting broader genomic patterns <span class="citation" data-cites="rigano2026chroococcidiopsis">(<a href="#ref-rigano2026chroococcidiopsis" role="doc-biblioref">Rigano and Billi 2026</a>)</span>.</p>
+<p>Additional genomes and MAGs in the dataset originate from sandstone, ignimbrite and other rock-associated environments.</p>
+<p>The presence of multiple lithic strategies within the broader dataset creates an opportunity to investigate whether particular genomic traits are associated with ecological specialization.</p>
+<p>However, environmental association alone is not interpreted as evidence of adaptation.</p>
+<p>Genomic patterns will ultimately be evaluated in the context of evolutionary relatedness and, where available, independent experimental evidence.</p>
+<hr>
+</section>
+</section>
+<section id="genome-quality-assessment" class="level2">
+<h2 class="anchored" data-anchor-id="genome-quality-assessment">Genome-quality assessment</h2>
+<p>All <strong>64 non-redundant genomes</strong> were evaluated before downstream comparative analyses.</p>
+<p>Genome completeness and contamination were assessed using CheckM2 <span class="citation" data-cites="chklovski2023checkm2">(<a href="#ref-chklovski2023checkm2" role="doc-biblioref">Chklovski et al. 2023</a>)</span>, while assembly characteristics were evaluated using complementary genome-assembly statistics, including QUAST-derived metrics <span class="citation" data-cites="gurevich2013quast">(<a href="#ref-gurevich2013quast" role="doc-biblioref">Gurevich et al. 2013</a>)</span>.</p>
+<p>The quality assessment considered:</p>
+<ul>
+<li>estimated completeness</li>
+<li>estimated contamination</li>
+<li>assembly fragmentation</li>
+<li>genome size</li>
+<li>number of contigs</li>
+</ul>
+<p>The objective was not to impose a single rigid quality threshold because the dataset includes both cultured isolates and environmental genomes.</p>
+<p>Instead, genomes were assigned to three operational quality categories:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Quality category</th>
+<th style="text-align: right;">Genomes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>PASS_CORE</td>
+<td style="text-align: right;">47</td>
+</tr>
+<tr class="even">
+<td>REVIEW</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr class="odd">
+<td>LOW_QUALITY</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>64</strong></td>
+</tr>
+</tbody>
+</table>
+<p><code>PASS_CORE</code> genomes represent the most reliable subset for analyses dependent on genome completeness.</p>
+<p><code>REVIEW</code> genomes were retained because they may contain biologically useful information but require more cautious interpretation due to lower completeness, higher contamination or greater assembly fragmentation.</p>
+<p><code>LOW_QUALITY</code> genomes were flagged as unsuitable for analyses in which incomplete gene representation could substantially affect biological interpretation.</p>
+<p>This distinction is particularly important for environmental genomes, where missing genomic regions could otherwise be incorrectly interpreted as genuine gene absence.</p>
+<section id="quality-filtering-before-phylogenomics" class="level3">
+<h3 class="anchored" data-anchor-id="quality-filtering-before-phylogenomics">Quality filtering before phylogenomics</h3>
+<p>One extremely incomplete genome was excluded before the principal phylogenomic reconstruction.</p>
+<p>A second genome did not satisfy the conserved-marker requirements during the phylogenomic workflow.</p>
+<p>The final conserved-marker phylogeny therefore contained <strong>62 focal genomes</strong>.</p>
+<p>Genome-quality information is retained throughout the project so that future functional comparisons can distinguish potential biological variation from assembly-related artefacts.</p>
+<hr>
+</section>
+</section>
+<section id="taxonomic-reconciliation" class="level2">
+<h2 class="anchored" data-anchor-id="taxonomic-reconciliation">Taxonomic reconciliation</h2>
+<p>The genomic dataset was initially assembled from records assigned to Chroococcidiopsidales according to public database taxonomy.</p>
+<p>However, traditional nomenclature, NCBI taxonomy and genome-based classification are not always fully consistent.</p>
+<p>For this reason, taxonomic identity was independently compared with the Genome Taxonomy Database framework <span class="citation" data-cites="parks2018gtdb parks2020taxonomy parks2022gtdb">(<a href="#ref-parks2018gtdb" role="doc-biblioref">Parks et al. 2018</a>, <a href="#ref-parks2020taxonomy" role="doc-biblioref">2020</a>, <a href="#ref-parks2022gtdb" role="doc-biblioref">2022</a>)</span>.</p>
+<section id="gtdb-comparison" class="level3">
+<h3 class="anchored" data-anchor-id="gtdb-comparison">GTDB comparison</h3>
+<p>The <strong>64 non-redundant genomes</strong> were compared with GTDB release R232.</p>
+<p>The initial comparison produced:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>GTDB status</th>
+<th style="text-align: right;">Genomes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FOUND</td>
+<td style="text-align: right;">31</td>
+</tr>
+<tr class="even">
+<td>NOT_FOUND</td>
+<td style="text-align: right;">19</td>
+</tr>
+<tr class="odd">
+<td>NO_ACCESSION</td>
+<td style="text-align: right;">14</td>
+</tr>
+<tr class="even">
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>64</strong></td>
+</tr>
+</tbody>
+</table>
+<p><code>FOUND</code> indicates genomes represented directly in GTDB R232.</p>
+<p><code>NOT_FOUND</code> indicates genomes carrying a GCA/GCF accession that were not represented in the release used for comparison.</p>
+<p><code>NO_ACCESSION</code> mainly includes genomes recovered from ENA, Figshare or other external repositories for which no conventional GCA/GCF identifier was associated with the local genome record.</p>
+<p>Importantly, absence from GTDB was <strong>not interpreted as evidence of poor genome quality or incorrect taxonomy</strong>.</p>
+<p>Several unresolved records correspond to recent MAGs or externally deposited assemblies that may not yet be represented in the GTDB release used for this analysis.</p>
+</section>
+<section id="differences-between-classification-systems" class="level3">
+<h3 class="anchored" data-anchor-id="differences-between-classification-systems">Differences between classification systems</h3>
+<p>The comparison highlighted differences between traditional taxonomic assignments and genome-based classification.</p>
+<p>Several genomes retrieved through the Chroococcidiopsidales framework are placed by GTDB within:</p>
+<ul>
+<li>phylum: Cyanobacteriota</li>
+<li>class: Cyanobacteriia</li>
+<li>order: Cyanobacteriales</li>
+<li>family: Chroococcidiopsidaceae</li>
+</ul>
+<p>This illustrates an important principle of the project:</p>
+<p><strong>taxonomic labels are treated as classifications to be evaluated rather than immutable biological identities.</strong></p>
+<p>The dataset therefore retains both:</p>
+<ul>
+<li>original database taxonomy</li>
+<li>GTDB genome-based taxonomy</li>
+</ul>
+<p>and interprets these classifications together with the independent phylogenomic reconstruction.</p>
+</section>
+<section id="implications-for-downstream-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="implications-for-downstream-analysis">Implications for downstream analysis</h3>
+<p>Taxonomic reconciliation is essential for comparative genomics.</p>
+<p>Genomes grouped only according to historical species or genus names may represent unexpectedly divergent genomic lineages.</p>
+<p>Conversely, genomes carrying different historical names may prove to be closely related.</p>
+<p>For this reason, downstream ecological and functional analyses will be interpreted primarily within the reconstructed evolutionary framework rather than relying exclusively on database nomenclature.</p>
+<hr>
+</section>
+</section>
+<section id="phylogenomic-reconstruction" class="level2">
+<h2 class="anchored" data-anchor-id="phylogenomic-reconstruction">Phylogenomic reconstruction</h2>
+<p>A genome-scale phylogenetic framework was constructed to investigate evolutionary relationships across the curated dataset.</p>
+<p>Rather than relying on a single marker such as the 16S rRNA gene, the analysis used a cyanobacteria-specific set of <strong>251 conserved single-copy protein markers</strong>.</p>
+<p>Marker detection, alignment, filtering and concatenation were performed using GToTree <span class="citation" data-cites="lee2019gtotree">(<a href="#ref-lee2019gtotree" role="doc-biblioref">Lee 2019</a>)</span>.</p>
+<p>The resulting concatenated alignment contained approximately:</p>
+<p><strong>59,684 amino-acid positions</strong></p>
+<p>across the genomes retained by the conserved-marker workflow.</p>
+<p>The use of hundreds of conserved proteins provides a genome-scale estimate of evolutionary relationships and reduces dependence on the evolutionary history of any individual locus.</p>
+<section id="maximum-likelihood-inference" class="level3">
+<h3 class="anchored" data-anchor-id="maximum-likelihood-inference">Maximum-likelihood inference</h3>
+<p>Maximum-likelihood phylogenetic inference was performed using IQ-TREE <span class="citation" data-cites="nguyen2015iqtree">(<a href="#ref-nguyen2015iqtree" role="doc-biblioref">Nguyen et al. 2015</a>)</span>.</p>
+<p>Model selection was performed using ModelFinder <span class="citation" data-cites="kalyaanamoorthy2017modelfinder">(<a href="#ref-kalyaanamoorthy2017modelfinder" role="doc-biblioref">Kalyaanamoorthy et al. 2017</a>)</span>.</p>
+<p>Rather than imposing a substitution model in advance, candidate empirical amino-acid models were evaluated according to their fit to the concatenated alignment.</p>
+<p>The best-fitting model according to the Bayesian Information Criterion was:</p>
+<p><strong>JTTDCMUT+F+R6</strong></p>
+<p>where:</p>
+<ul>
+<li><code>JTTDCMUT</code> defines the empirical amino-acid substitution matrix</li>
+<li><code>+F</code> uses amino-acid frequencies estimated directly from the alignment</li>
+<li><code>+R6</code> models among-site evolutionary-rate heterogeneity using six FreeRate categories</li>
+</ul>
+<p>Branch support was evaluated using:</p>
+<ul>
+<li><strong>1,000 Ultrafast Bootstrap replicates</strong> <span class="citation" data-cites="hoang2018ufboot2">(<a href="#ref-hoang2018ufboot2" role="doc-biblioref">Hoang et al. 2018</a>)</span></li>
+<li><strong>1,000 SH-aLRT replicates</strong> <span class="citation" data-cites="guindon2010shlrt">(<a href="#ref-guindon2010shlrt" role="doc-biblioref">Guindon et al. 2010</a>)</span></li>
+</ul>
+<p>The ultrafast-bootstrap analysis reached a correlation coefficient of <strong>0.999</strong>, indicating convergence of the bootstrap sampling procedure.</p>
+<p>The final maximum-likelihood reconstruction contained <strong>62 focal genomes</strong> after quality and conserved-marker filtering.</p>
+</section>
+<section id="tree-rooting" class="level3">
+<h3 class="anchored" data-anchor-id="tree-rooting">Tree rooting</h3>
+<p>An explicit outgroup strategy was developed to provide evolutionary orientation to the phylogeny.</p>
+<p>Two cyanobacterial genomes outside the focal Chroococcidiopsidaceae radiation were selected after genome-based taxonomic verification:</p>
+<ul>
+<li><em>Elainella saxicola</em></li>
+<li><em>Drouetiella hepatica</em></li>
+</ul>
+<p>Both are classified within Elainellales / Elainellaceae in GTDB.</p>
+<p>The two genomes were used exclusively as outgroups and are not included in the ecological comparison dataset.</p>
+<p>The rooted phylogeny provides the evolutionary framework required for subsequent comparisons of genomic traits and environmental associations.</p>
+<hr>
+</section>
+</section>
+<section id="current-project-status" class="level2">
+<h2 class="anchored" data-anchor-id="current-project-status">Current project status</h2>
+<p>The project has currently completed the principal stages of:</p>
+<ul>
+<li>systematic multi-source genome collection</li>
+<li>environmental metadata curation</li>
+<li>genome deduplication</li>
+<li>genome-quality assessment</li>
+<li>taxonomic reconciliation</li>
+<li>conserved-marker phylogenomics</li>
+</ul>
+<p>The project is now progressing toward comparative and functional genomic analyses.</p>
+<p>Current and planned analyses include:</p>
+<ul>
+<li>genome-wide similarity analysis</li>
+<li>comparative gene-content analysis</li>
+<li>photosynthetic systems</li>
+<li>far-red light photoacclimation</li>
+<li>photoprotective mechanisms</li>
+<li>desiccation and osmotic-stress systems</li>
+<li>DNA protection and repair</li>
+<li>oxidative-stress responses</li>
+<li>extracellular polysaccharide and carbohydrate-associated functions</li>
+<li>integration of functional genomic profiles with ecological metadata</li>
+</ul>
+<p>Previous studies provide biological hypotheses for several of these functional systems <span class="citation" data-cites="rigano2026chroococcidiopsis antonaru2023farlip">(<a href="#ref-rigano2026chroococcidiopsis" role="doc-biblioref">Rigano and Billi 2026</a>; <a href="#ref-antonaru2023farlip" role="doc-biblioref"><span class="nocase">Antonaru et al.</span> 2023</a>)</span>, but no ecological or adaptive conclusion will be assigned to the current dataset until these analyses are completed.</p>
+<p>The final analytical objective is to evaluate genomic variation together with both:</p>
+<p><strong>phylogenetic position + environmental context</strong></p>
+<p>so that similarities caused by shared evolutionary history are not automatically interpreted as independent ecological adaptation.</p>
+
+
+
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-antonaru2023farlip" class="csl-entry" role="listitem">
+<span class="nocase">Antonaru, Laura A., Vera M. Selinger, Patrick Jung, et al.</span> 2023. <span>“Common Loss of Far-Red Light Photoacclimation in Cyanobacteria from Hot and Cold Deserts: A Case Study in the Chroococcidiopsidales.”</span> <em>ISME Communications</em> 3: 113. <a href="https://doi.org/10.1038/s43705-023-00319-4">https://doi.org/10.1038/s43705-023-00319-4</a>.
+</div>
+<div id="ref-bahl2011biogeography" class="csl-entry" role="listitem">
+Bahl, Justin, Maggie C. Y. Lau, Gavin J. D. Smith, et al. 2011. <span>“Ancient Origins Determine Global Biogeography of Hot and Cold Desert Cyanobacteria.”</span> <em>Nature Communications</em> 2: 163. <a href="https://doi.org/10.1038/ncomms1167">https://doi.org/10.1038/ncomms1167</a>.
+</div>
 <div id="ref-billi2000radiation" class="csl-entry" role="listitem">
 Billi, Daniela, E. Imre Friedmann, Kenneth G. Hofer, Maria Grilli Caiola, and Roseli Ocampo-Friedmann. 2000. <span>“Ionizing-Radiation Resistance in the Desiccation-Tolerant Cyanobacterium Chroococcidiopsis.”</span> <em>Applied and Environmental Microbiology</em> 66 (4): 1489–92. <a href="https://doi.org/10.1128/AEM.66.4.1489-1492.2000">https://doi.org/10.1128/AEM.66.4.1489-1492.2000</a>.
 </div>
-<div id="ref-jgiSAGGYP10" class="csl-entry" role="listitem">
-DOE Joint Genome Institute. 2023a. <em>Chroococcidiopsis Sp. SAG-GYP-10 Genome Project</em>. JGI Genome Portal. <a href="https://genome.jgi.doe.gov/portal/ChrspSAGGYP10/ChrspSAGGYP10.info.html">https://genome.jgi.doe.gov/portal/ChrspSAGGYP10/ChrspSAGGYP10.info.html</a>.
+<div id="ref-chklovski2023checkm2" class="csl-entry" role="listitem">
+Chklovski, Alex, Donovan H. Parks, Ben J. Woodcroft, and Gene W. Tyson. 2023. <span>“CheckM2: A Rapid, Scalable and Accurate Tool for Assessing Microbial Genome Quality Using Machine Learning.”</span> <em>Nature Methods</em> 20 (8): 1203–12. <a href="https://doi.org/10.1038/s41592-023-01940-w">https://doi.org/10.1038/s41592-023-01940-w</a>.
 </div>
-<div id="ref-jgiSAGGYP7" class="csl-entry" role="listitem">
-DOE Joint Genome Institute. 2023b. <em>Chroococcidiopsis Sp. SAG-GYP-7 Genome Project</em>. JGI Genome Portal. <a href="https://genome.jgi.doe.gov/portal/ChrspSAGGYP7/ChrspSAGGYP7.info.html">https://genome.jgi.doe.gov/portal/ChrspSAGGYP7/ChrspSAGGYP7.info.html</a>.
+<div id="ref-guindon2010shlrt" class="csl-entry" role="listitem">
+Guindon, Stéphane, Jean-François Dufayard, Vincent Lefort, Maria Anisimova, Wim Hordijk, and Olivier Gascuel. 2010. <span>“New Algorithms and Methods to Estimate Maximum-Likelihood Phylogenies: Assessing the Performance of PhyML 3.0.”</span> <em>Systematic Biology</em> 59 (3): 307–21. <a href="https://doi.org/10.1093/sysbio/syq010">https://doi.org/10.1093/sysbio/syq010</a>.
+</div>
+<div id="ref-gurevich2013quast" class="csl-entry" role="listitem">
+Gurevich, Alexey, Vladislav Saveliev, Nikolay Vyahhi, and Glenn Tesler. 2013. <span>“QUAST: Quality Assessment Tool for Genome Assemblies.”</span> <em>Bioinformatics</em> 29 (8): 1072–75. <a href="https://doi.org/10.1093/bioinformatics/btt086">https://doi.org/10.1093/bioinformatics/btt086</a>.
+</div>
+<div id="ref-hoang2018ufboot2" class="csl-entry" role="listitem">
+Hoang, Diep Thi, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh, and Le Sy Vinh. 2018. <span>“UFBoot2: Improving the Ultrafast Bootstrap Approximation.”</span> <em>Molecular Biology and Evolution</em> 35 (2): 518–22. <a href="https://doi.org/10.1093/molbev/msx281">https://doi.org/10.1093/molbev/msx281</a>.
+</div>
+<div id="ref-kalyaanamoorthy2017modelfinder" class="csl-entry" role="listitem">
+Kalyaanamoorthy, Subha, Bui Quang Minh, Thomas K. F. Wong, Arndt von Haeseler, and Lars S. Jermiin. 2017. <span>“ModelFinder: Fast Model Selection for Accurate Phylogenetic Estimates.”</span> <em>Nature Methods</em> 14: 587–89. <a href="https://doi.org/10.1038/nmeth.4285">https://doi.org/10.1038/nmeth.4285</a>.
+</div>
+<div id="ref-lee2019gtotree" class="csl-entry" role="listitem">
+Lee, Michael D. 2019. <span>“GToTree: A User-Friendly Workflow for Phylogenomics.”</span> <em>Bioinformatics</em> 35 (20): 4162–64. <a href="https://doi.org/10.1093/bioinformatics/btz188">https://doi.org/10.1093/bioinformatics/btz188</a>.
+</div>
+<div id="ref-nguyen2015iqtree" class="csl-entry" role="listitem">
+Nguyen, Lam-Tung, Heiko A. Schmidt, Arndt von Haeseler, and Bui Quang Minh. 2015. <span>“IQ-TREE: A Fast and Effective Stochastic Algorithm for Estimating Maximum-Likelihood Phylogenies.”</span> <em>Molecular Biology and Evolution</em> 32 (1): 268–74. <a href="https://doi.org/10.1093/molbev/msu300">https://doi.org/10.1093/molbev/msu300</a>.
 </div>
 <div id="ref-parks2020taxonomy" class="csl-entry" role="listitem">
 Parks, Donovan H., Maria Chuvochina, Pierre-Alain Chaumeil, Christian Rinke, Aaron J. Mussig, and Philip Hugenholtz. 2020. <span>“A Complete Domain-to-Species Taxonomy for Bacteria and Archaea.”</span> <em>Nature Biotechnology</em> 38: 1079–86. <a href="https://doi.org/10.1038/s41587-020-0501-8">https://doi.org/10.1038/s41587-020-0501-8</a>.
