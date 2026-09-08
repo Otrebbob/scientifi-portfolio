@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Reanalysis of Public Illumina Sequencing Data from Chroococcidiopsis-associated Samples – Roberto De CarolisMicrobiology &amp; Bioinformatics</title>
+<title>Ecogenomics and Comparative Genomics of Chroococcidiopsidales – Roberto De CarolisMicrobiology &amp; Bioinformatics</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,42 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
 }
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
 }
-</style>
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -173,34 +157,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#project-overview" id="toc-project-overview" class="nav-link active" data-scroll-target="#project-overview">Project overview</a></li>
-  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
-  <li><a href="#data-source" id="toc-data-source" class="nav-link" data-scroll-target="#data-source">Data source</a></li>
-  <li><a href="#raw-data-quality-control" id="toc-raw-data-quality-control" class="nav-link" data-scroll-target="#raw-data-quality-control">Raw data quality control</a>
+  <li><a href="#scientific-background" id="toc-scientific-background" class="nav-link" data-scroll-target="#scientific-background">Scientific background</a></li>
+  <li><a href="#project-objectives" id="toc-project-objectives" class="nav-link" data-scroll-target="#project-objectives">Project objectives</a>
   <ul class="collapse">
-  <li><a href="#quality-control-summary" id="toc-quality-control-summary" class="nav-link" data-scroll-target="#quality-control-summary">Quality-control summary</a></li>
-  <li><a href="#gc-content-distribution" id="toc-gc-content-distribution" class="nav-link" data-scroll-target="#gc-content-distribution">GC-content distribution</a></li>
-  <li><a href="#tools-used" id="toc-tools-used" class="nav-link" data-scroll-target="#tools-used">Tools used</a></li>
-  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">Interpretation</a></li>
+  <li><a href="#curate-a-reliable-genomic-dataset" id="toc-curate-a-reliable-genomic-dataset" class="nav-link" data-scroll-target="#curate-a-reliable-genomic-dataset">1. Curate a reliable genomic dataset</a></li>
+  <li><a href="#investigate-genomic-taxonomy-and-evolutionary-relationships" id="toc-investigate-genomic-taxonomy-and-evolutionary-relationships" class="nav-link" data-scroll-target="#investigate-genomic-taxonomy-and-evolutionary-relationships">2. Investigate genomic taxonomy and evolutionary relationships</a></li>
+  <li><a href="#characterize-conserved-and-variable-genomic-features" id="toc-characterize-conserved-and-variable-genomic-features" class="nav-link" data-scroll-target="#characterize-conserved-and-variable-genomic-features">3. Characterize conserved and variable genomic features</a></li>
+  <li><a href="#integrate-genomic-and-ecological-information" id="toc-integrate-genomic-and-ecological-information" class="nav-link" data-scroll-target="#integrate-genomic-and-ecological-information">4. Integrate genomic and ecological information</a></li>
   </ul></li>
-  <li><a href="#taxonomic-profiling" id="toc-taxonomic-profiling" class="nav-link" data-scroll-target="#taxonomic-profiling">Taxonomic profiling</a>
-  <ul class="collapse">
-  <li><a href="#interpretation-1" id="toc-interpretation-1" class="nav-link" data-scroll-target="#interpretation-1">Interpretation</a></li>
-  </ul></li>
-  <li><a href="#read-trimming-and-quality-filtering" id="toc-read-trimming-and-quality-filtering" class="nav-link" data-scroll-target="#read-trimming-and-quality-filtering">Read trimming and quality filtering</a></li>
-  <li><a href="#de-novo-assembly" id="toc-de-novo-assembly" class="nav-link" data-scroll-target="#de-novo-assembly">De novo assembly</a>
-  <ul class="collapse">
-  <li><a href="#assembly-quality-assessment" id="toc-assembly-quality-assessment" class="nav-link" data-scroll-target="#assembly-quality-assessment">Assembly quality assessment</a></li>
-  <li><a href="#interpretation-2" id="toc-interpretation-2" class="nav-link" data-scroll-target="#interpretation-2">Interpretation</a></li>
-  </ul></li>
-  <li><a href="#read-mapping" id="toc-read-mapping" class="nav-link" data-scroll-target="#read-mapping">Read mapping</a>
-  <ul class="collapse">
-  <li><a href="#insert-size-distribution" id="toc-insert-size-distribution" class="nav-link" data-scroll-target="#insert-size-distribution">Insert-size distribution</a></li>
-  <li><a href="#interpretation-3" id="toc-interpretation-3" class="nav-link" data-scroll-target="#interpretation-3">Interpretation</a></li>
-  </ul></li>
-  <li><a href="#analysis-workflow" id="toc-analysis-workflow" class="nav-link" data-scroll-target="#analysis-workflow">Analysis workflow</a></li>
-  <li><a href="#tools-and-software" id="toc-tools-and-software" class="nav-link" data-scroll-target="#tools-and-software">Tools and software</a></li>
-  <li><a href="#reproducibility" id="toc-reproducibility" class="nav-link" data-scroll-target="#reproducibility">Reproducibility</a></li>
-  <li><a href="#project-status" id="toc-project-status" class="nav-link" data-scroll-target="#project-status">Project status</a></li>
   </ul>
 </nav>
     </div>
@@ -209,7 +173,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Reanalysis of Public Illumina Sequencing Data from Chroococcidiopsis-associated Samples</h1>
+<h1 class="title">Ecogenomics and Comparative Genomics of Chroococcidiopsidales</h1>
 </div>
 
 
@@ -226,240 +190,159 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<p><strong>Project status:</strong> Ongoing<br>
+<strong>Last update:</strong> September 2026</p>
 <section id="project-overview" class="level2">
 <h2 class="anchored" data-anchor-id="project-overview">Project overview</h2>
-<p>This project is an independent bioinformatic reanalysis of publicly available Illumina sequencing data retrieved from the NCBI Sequence Read Archive (SRA).</p>
-<p>The sequencing experiment and generation of the raw data were not performed by me. My contribution consists of the computational analysis, workflow design, interpretation of the results and documentation of the analysis.</p>
-</section>
-<section id="objectives" class="level2">
-<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
-<p>The main objectives of the project are to:</p>
+<p>This independent project explores the <strong>genomic, taxonomic and ecological diversity of Chroococcidiopsidales</strong>, with particular attention to <em>Chroococcidiopsis</em> and related cyanobacterial lineages associated with extreme terrestrial environments.</p>
+<p>The study uses publicly available genomic resources together with environmental metadata to investigate diversity at a broader scale than single-strain genome characterization.</p>
+<p>The central idea is to integrate:</p>
 <ul>
-<li>assess the quality of the raw sequencing reads</li>
-<li>investigate the taxonomic composition of the dataset</li>
-<li>remove adapters and low-quality sequence regions</li>
-<li>perform de novo assembly</li>
-<li>evaluate the quality of the resulting assembly</li>
-<li>map the sequencing reads back to the assembled contigs</li>
-<li>investigate the biological composition of the assembled sequences</li>
+<li>genome quality assessment</li>
+<li>genome-based taxonomy</li>
+<li>phylogenomics</li>
+<li>genomic similarity</li>
+<li>comparative genomics</li>
+<li>functional annotation</li>
+<li>environmental metadata</li>
 </ul>
+<p>into a single ecogenomic framework.</p>
+<p>Members of <em>Chroococcidiopsis</em> are particularly interesting because several strains have been isolated from hot and cold desert lithic environments and have been extensively studied for their ability to tolerate desiccation, radiation and other extreme conditions <span class="citation" data-cites="billi2000radiation rigano2026chroococcidiopsis">(<a href="#ref-billi2000radiation" role="doc-biblioref">Billi et al. 2000</a>; <a href="#ref-rigano2026chroococcidiopsis" role="doc-biblioref">Rigano and Billi 2026</a>)</span>.</p>
+<p>Recent comparative genomic work on <em>Chroococcidiopsis</em> sp. CCMEE 029, CCMEE 057 and CCMEE 064 showed that closely related desert strains share a substantial conserved genomic repertoire while also retaining strain-specific differences in metabolic and stress-associated functions <span class="citation" data-cites="rigano2026chroococcidiopsis">(<a href="#ref-rigano2026chroococcidiopsis" role="doc-biblioref">Rigano and Billi 2026</a>)</span>.</p>
+<p>However, publicly available genomic databases now contain a broader collection of cultured isolates, environmental genomes and single-cell genomes assigned to <em>Chroococcidiopsis</em> and related lineages.</p>
+<p>Some of these genomes are associated with detailed environmental metadata, including geographic origin, substrate and ecosystem characteristics. For example, publicly available JGI records include <em>Chroococcidiopsis</em> genomes recovered from rock-dwelling communities associated with gypsum substrates in the Atacama Desert <span class="citation" data-cites="jgiSAGGYP7 jgiSAGGYP10">(<a href="#ref-jgiSAGGYP7" role="doc-biblioref">DOE Joint Genome Institute 2023b</a>, <a href="#ref-jgiSAGGYP10" role="doc-biblioref">2023a</a>)</span>.</p>
+<p>This creates an opportunity to move from the comparison of a few experimentally characterized strains toward a broader <strong>ecogenomic investigation of Chroococcidiopsidales diversity</strong>.</p>
+<p>The project therefore asks a central question:</p>
+<blockquote class="blockquote">
+<p><strong>How is genomic diversity within Chroococcidiopsidales structured across evolutionary lineages and environmental contexts?</strong></p>
+</blockquote>
+<p>Rather than assuming that particular genes directly explain ecological adaptation, the analysis aims to identify genomic and ecological associations that can generate biologically testable hypotheses.</p>
+<hr>
 </section>
-<section id="data-source" class="level2">
-<h2 class="anchored" data-anchor-id="data-source">Data source</h2>
-<p>This project uses publicly available Illumina paired-end sequencing data retrieved from the NCBI Sequence Read Archive (SRA).</p>
+<section id="scientific-background" class="level2">
+<h2 class="anchored" data-anchor-id="scientific-background">Scientific background</h2>
+<p>Cyanobacteria represent a highly diverse group of photosynthetic microorganisms capable of colonizing a wide range of environments.</p>
+<p>Within this diversity, <em>Chroococcidiopsis</em> has attracted particular attention because of the extraordinary stress tolerance reported for several desert-derived strains.</p>
+<p>Experimental studies have demonstrated substantial resistance to desiccation and ionizing radiation in <em>Chroococcidiopsis</em>, making members of the genus important models for investigating microbial survival under extreme environmental conditions <span class="citation" data-cites="billi2000radiation">(<a href="#ref-billi2000radiation" role="doc-biblioref">Billi et al. 2000</a>)</span>.</p>
+<p>More recent genomic analyses have expanded this perspective.</p>
+<p>Comparative genomics of the desert strains CCMEE 029, CCMEE 057 and CCMEE 064 identified conserved systems potentially associated with:</p>
 <ul>
-<li><strong>SRA accession:</strong> SRR37017621</li>
-<li><strong>Sequencing platform:</strong> Illumina MiSeq</li>
-<li><strong>Sequencing strategy:</strong> Paired-end</li>
-<li><strong>Original study:</strong> <em>Comparative genomics of space-resilient Chroococcidiopsis cyanobacteria reveals a core genetic repertoire supporting extreme tolerance towards desert and non-Earth conditions</em></li>
-<li><strong>Authors:</strong> Gabriele Rigano and Daniela Billi</li>
-<li><strong>Journal:</strong> FEMS Microbes</li>
-<li><strong>Year:</strong> 2026</li>
-<li><strong>DOI:</strong> 10.1093/femsmc/xtag036</li>
+<li>desiccation response</li>
+<li>compatible-solute metabolism</li>
+<li>DNA protection and repair</li>
+<li>oxidative-stress defence</li>
+<li>photoprotection</li>
 </ul>
-<p>The sequencing data were generated and deposited by the authors of the original study. The experimental work and generation of the raw sequencing data were not performed as part of this portfolio project.</p>
-<p>For this project, the publicly available raw reads were independently downloaded and reanalysed to develop and document a reproducible microbial genomics workflow.</p>
+<p>while also revealing genomic differences among individual strains <span class="citation" data-cites="rigano2026chroococcidiopsis">(<a href="#ref-rigano2026chroococcidiopsis" role="doc-biblioref">Rigano and Billi 2026</a>)</span>.</p>
+<p>These observations suggest that extreme-environment survival may involve both a <strong>conserved stress-response repertoire</strong> and lineage-specific genomic characteristics.</p>
+<p>At the same time, genome-based taxonomy has substantially changed how bacterial evolutionary relationships are investigated.</p>
+<p>Resources such as the Genome Taxonomy Database use genome-scale phylogenetic information to construct a standardized bacterial and archaeal taxonomy <span class="citation" data-cites="parks2018gtdb parks2020taxonomy parks2022gtdb">(<a href="#ref-parks2018gtdb" role="doc-biblioref">Parks et al. 2018</a>, <a href="#ref-parks2020taxonomy" role="doc-biblioref">2020</a>, <a href="#ref-parks2022gtdb" role="doc-biblioref">2022</a>)</span>.</p>
+<p>This is particularly relevant for cyanobacteria because traditional names, database assignments and genome-based classifications do not always describe evolutionary diversity in exactly the same way.</p>
+<p>For this reason, this project does not treat the existing taxonomic label of each genome as an unquestionable biological identity.</p>
+<p>Instead, taxonomic information is evaluated together with:</p>
+<ul>
+<li>genome quality</li>
+<li>phylogenomic placement</li>
+<li>genome-wide similarity</li>
+<li>environmental origin</li>
+</ul>
+<p>before comparative biological interpretation.</p>
+<p>A further opportunity comes from the increasing availability of environmental and single-cell genomic datasets.</p>
+<p>For example, JGI genomic records assigned to <em>Chroococcidiopsis</em> include uncultured organisms associated with terrestrial rock-dwelling communities from the Atacama Desert, with metadata describing gypsum substrates, geographic coordinates and elevation <span class="citation" data-cites="jgiSAGGYP7 jgiSAGGYP10">(<a href="#ref-jgiSAGGYP7" role="doc-biblioref">DOE Joint Genome Institute 2023b</a>, <a href="#ref-jgiSAGGYP10" role="doc-biblioref">2023a</a>)</span>.</p>
+<p>Such records provide a direct connection between <strong>genome and habitat</strong>.</p>
+<p>This connection forms the basis of the ecogenomic component of the project.</p>
+<p>Instead of analysing genome variation independently of environmental origin, the objective is to investigate whether phylogenetic and genomic patterns correspond to differences in ecological context.</p>
+<hr>
 </section>
-<section id="raw-data-quality-control" class="level2">
-<h2 class="anchored" data-anchor-id="raw-data-quality-control">Raw data quality control</h2>
-<p>The quality of the raw paired-end reads was assessed using <strong>FastQC</strong>, while <strong>MultiQC</strong> was used to aggregate the individual quality-control reports into a single summary.</p>
-<p>The raw dataset showed generally high sequencing quality, with per-base quality scores remaining high across most of the read length.</p>
-<section id="quality-control-summary" class="level3">
-<h3 class="anchored" data-anchor-id="quality-control-summary">Quality-control summary</h3>
-<p>The raw sequencing dataset contained <strong>705,422 paired-end read pairs</strong>.</p>
-<p>FastQC and MultiQC showed:</p>
+<section id="project-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="project-objectives">Project objectives</h2>
+<p>The project is structured around four connected objectives.</p>
+<section id="curate-a-reliable-genomic-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="curate-a-reliable-genomic-dataset">1. Curate a reliable genomic dataset</h3>
+<p>The first objective is to identify publicly available genomes assigned to Chroococcidiopsidales and evaluate whether they are suitable for comparative analysis.</p>
+<p>Genome records may differ substantially in:</p>
 <ul>
-<li>generally high per-base sequencing quality</li>
-<li>median quality scores above approximately <strong>Q24</strong> across the reads</li>
-<li>similar quality profiles between R1 and R2</li>
-<li>a bimodal GC-content distribution, with peaks around <strong>49%</strong> and <strong>69%</strong></li>
-<li>a heterogeneous sequence-length distribution, with major read-length populations around <strong>210 bp</strong> and <strong>250 bp</strong></li>
+<li>completeness</li>
+<li>contamination</li>
+<li>assembly fragmentation</li>
+<li>genome size</li>
+<li>sequencing strategy</li>
+<li>biological origin</li>
 </ul>
-<p>These observations suggested that the dataset contained sequencing reads originating from more than one genomic background rather than from a single homogeneous isolate.</p>
-<p>The main observations were:</p>
-<ul>
-<li>overall high per-base sequence quality</li>
-<li>similar quality profiles between forward and reverse reads</li>
-<li>a warning in the GC-content distribution, with two distinct peaks</li>
-<li>a warning in the sequence-length distribution, reflecting heterogeneous read lengths</li>
-<li>no major indication of severe sequencing-quality degradation</li>
-</ul>
-<p>The presence of two GC-content peaks suggested that the dataset might contain DNA from organisms with different genomic compositions. This observation was therefore investigated further using taxonomic classification.</p>
+<p>This is particularly important when working with single-cell and environmental genomes, where incomplete assemblies or contamination can strongly influence downstream analyses.</p>
+<p>Genome-quality assessment therefore precedes phylogenomic and comparative analyses.</p>
 </section>
-<section id="gc-content-distribution" class="level3">
-<h3 class="anchored" data-anchor-id="gc-content-distribution">GC-content distribution</h3>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/gc_content_raw_R1.svg" class="img-fluid figure-img"></p>
-<figcaption>Per-sequence GC-content distribution for the raw R1 reads generated with FastQC.</figcaption>
-</figure>
+<section id="investigate-genomic-taxonomy-and-evolutionary-relationships" class="level3">
+<h3 class="anchored" data-anchor-id="investigate-genomic-taxonomy-and-evolutionary-relationships">2. Investigate genomic taxonomy and evolutionary relationships</h3>
+<p>The second objective is to reconstruct evolutionary relationships among selected genomes using genome-scale information.</p>
+<p>The project compares existing taxonomic assignments with genome-based evidence in order to identify:</p>
+<ul>
+<li>closely related genomic clusters</li>
+<li>divergent lineages</li>
+<li>possible inconsistencies between classifications</li>
+<li>relationships that may not be apparent from historical species or genus labels</li>
+</ul>
+<p>Genome-based taxonomy is therefore treated as an analytical component rather than simply copied from database annotations <span class="citation" data-cites="parks2018gtdb parks2020taxonomy parks2022gtdb">(<a href="#ref-parks2018gtdb" role="doc-biblioref">Parks et al. 2018</a>, <a href="#ref-parks2020taxonomy" role="doc-biblioref">2020</a>, <a href="#ref-parks2022gtdb" role="doc-biblioref">2022</a>)</span>.</p>
+</section>
+<section id="characterize-conserved-and-variable-genomic-features" class="level3">
+<h3 class="anchored" data-anchor-id="characterize-conserved-and-variable-genomic-features">3. Characterize conserved and variable genomic features</h3>
+<p>The third objective is to compare gene content and functional potential across the selected genomes.</p>
+<p>Particular attention will be given to systems potentially relevant to survival in extreme terrestrial environments, including:</p>
+<ul>
+<li>desiccation-associated functions</li>
+<li>osmoprotection</li>
+<li>DNA protection and repair</li>
+<li>oxidative-stress defence</li>
+<li>photoprotection</li>
+<li>extracellular and cell-surface functions</li>
+</ul>
+<p>Previous work on CCMEE 029, CCMEE 057 and CCMEE 064 provides a useful biological framework for defining several of these functional categories <span class="citation" data-cites="rigano2026chroococcidiopsis">(<a href="#ref-rigano2026chroococcidiopsis" role="doc-biblioref">Rigano and Billi 2026</a>)</span>.</p>
+<p>The broader dataset will allow these traits to be investigated across a larger evolutionary context.</p>
+</section>
+<section id="integrate-genomic-and-ecological-information" class="level3">
+<h3 class="anchored" data-anchor-id="integrate-genomic-and-ecological-information">4. Integrate genomic and ecological information</h3>
+<p>The final objective is to connect genomic variation with environmental metadata.</p>
+<p>Where available, each genome will be associated with information describing:</p>
+<ul>
+<li>geographic origin</li>
+<li>ecosystem type</li>
+<li>substrate</li>
+<li>elevation</li>
+<li>cultivation status</li>
+<li>environmental source</li>
+</ul>
+<p>The aim is to determine whether genomic and phylogenetic patterns show associations with ecological characteristics.</p>
+<p>These associations will be interpreted as <strong>hypothesis-generating ecogenomic patterns</strong>, not as direct demonstrations of physiological adaptation.</p>
+<p>Experimental validation would ultimately be required to establish causal links between genomic traits and environmental phenotypes.</p>
+
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-billi2000radiation" class="csl-entry" role="listitem">
+Billi, Daniela, E. Imre Friedmann, Kenneth G. Hofer, Maria Grilli Caiola, and Roseli Ocampo-Friedmann. 2000. <span>“Ionizing-Radiation Resistance in the Desiccation-Tolerant Cyanobacterium Chroococcidiopsis.”</span> <em>Applied and Environmental Microbiology</em> 66 (4): 1489–92. <a href="https://doi.org/10.1128/AEM.66.4.1489-1492.2000">https://doi.org/10.1128/AEM.66.4.1489-1492.2000</a>.
 </div>
-<p>The GC-content distribution shows a clear bimodal profile, with major peaks around approximately <strong>49%</strong> and <strong>69% GC</strong>. This deviation from a single approximately normal distribution suggests that the dataset may contain sequences originating from organisms with different genomic compositions.</p>
-</section>
-<section id="tools-used" class="level3">
-<h3 class="anchored" data-anchor-id="tools-used">Tools used</h3>
-<ul>
-<li><strong>FastQC</strong> — individual read-quality assessment</li>
-<li><strong>MultiQC</strong> — aggregation and comparison of FastQC reports</li>
-</ul>
-</section>
-<section id="interpretation" class="level3">
-<h3 class="anchored" data-anchor-id="interpretation">Interpretation</h3>
-<p>The quality-control results indicated that the dataset was suitable for downstream analysis. However, the non-unimodal GC-content distribution suggested that the sequencing data might not originate from a single homogeneous genome.</p>
-<p>For this reason, taxonomic profiling was performed before genome assembly.</p>
-</section>
-</section>
-<section id="taxonomic-profiling" class="level2">
-<h2 class="anchored" data-anchor-id="taxonomic-profiling">Taxonomic profiling</h2>
-<p>Taxonomic classification of the raw sequencing reads was performed using <strong>Kraken2</strong>.</p>
-<p>Approximately <strong>34.35%</strong> of the reads were classified, while <strong>65.65%</strong> remained unclassified.</p>
-<p>Among the classified reads, the most abundant assignments included:</p>
-<ul>
-<li><strong>Chroococcidiopsis</strong> — approximately 4.54%</li>
-<li><strong>Roseococcus</strong> — approximately 3.39%</li>
-<li><strong>Brevundimonas</strong> — approximately 2.71%</li>
-<li><strong>Porphyrobacter</strong> — approximately 1.16%</li>
-<li><strong>Erythrobacter</strong> — approximately 0.97%</li>
-<li><strong>Mesorhizobium</strong> — approximately 0.65%</li>
-<li><strong>Streptomyces</strong> — approximately 0.48%</li>
-<li><strong>Microbacterium</strong> — approximately 0.42%</li>
-<li><strong>Luteimonas</strong> — approximately 0.35%</li>
-<li><strong>Pseudomonas</strong> — approximately 0.34%</li>
-</ul>
-<section id="interpretation-1" class="level3">
-<h3 class="anchored" data-anchor-id="interpretation-1">Interpretation</h3>
-<p>The taxonomic profile supports the hypothesis suggested by the bimodal GC-content distribution: the sequencing dataset does not appear to represent a single homogeneous genomic source.</p>
-<p>The presence of multiple bacterial genera indicates a complex microbial composition, which is important to consider when choosing the downstream assembly strategy.</p>
-<p>For this reason, <strong>metaSPAdes</strong> was selected instead of a standard isolate-genome assembly workflow.</p>
-</section>
-</section>
-<section id="read-trimming-and-quality-filtering" class="level2">
-<h2 class="anchored" data-anchor-id="read-trimming-and-quality-filtering">Read trimming and quality filtering</h2>
-<p>Adapter removal and quality filtering were performed using <strong>fastp</strong>.</p>
-<p>The filtering strategy included:</p>
-<ul>
-<li>automatic paired-end adapter detection</li>
-<li>right-end quality trimming</li>
-<li>a sliding window of 4 bases</li>
-<li>minimum mean quality threshold of Q20</li>
-<li>minimum retained read length of 100 bp</li>
-</ul>
-<p>The main fastp parameters were:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">--detect_adapter_for_pe</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">--cut_right</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">--cut_right_window_size</span> 4</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">--cut_right_mean_quality</span> 20</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">--length_required</span> 100</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">--thread</span> 4</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="de-novo-assembly" class="level2">
-<h2 class="anchored" data-anchor-id="de-novo-assembly">De novo assembly</h2>
-<p>The quality-filtered reads were assembled de novo using <strong>metaSPAdes</strong>.</p>
-<p>A metagenomic assembler was selected because both the FastQC GC-content profile and Kraken2 taxonomic classification suggested that the sequencing dataset contained DNA from multiple genomic sources.</p>
-<section id="assembly-quality-assessment" class="level3">
-<h3 class="anchored" data-anchor-id="assembly-quality-assessment">Assembly quality assessment</h3>
-<p>Assembly statistics were evaluated using <strong>QUAST</strong>.</p>
-<p>The main results were:</p>
-<ul>
-<li><strong>Total assembly length:</strong> 33,286,655 bp</li>
-<li><strong>Number of contigs ≥ 1 kb:</strong> 6,861</li>
-<li><strong>Number of contigs ≥ 5 kb:</strong> 807</li>
-<li><strong>Number of contigs ≥ 10 kb:</strong> 349</li>
-<li><strong>Number of contigs ≥ 25 kb:</strong> 149</li>
-<li><strong>Number of contigs ≥ 50 kb:</strong> 62</li>
-<li><strong>Largest contig:</strong> 328,308 bp</li>
-<li><strong>N50:</strong> 3,810 bp</li>
-<li><strong>N90:</strong> 701 bp</li>
-<li><strong>L50:</strong> 1,244</li>
-<li><strong>L90:</strong> 10,480</li>
-<li><strong>GC content:</strong> 62.96%</li>
-<li><strong>Ambiguous bases (N):</strong> 0</li>
-</ul>
-</section>
-<section id="interpretation-2" class="level3">
-<h3 class="anchored" data-anchor-id="interpretation-2">Interpretation</h3>
-<p>The assembly was highly fragmented, as indicated by the relatively low <strong>N50</strong> and the large number of contigs required to reconstruct half of the assembly.</p>
-<p>The total assembly size of approximately <strong>33.3 Mb</strong> is also much larger than expected for a single cyanobacterial genome.</p>
-<p>Together with the taxonomic classification results, this supports the interpretation that the sequencing dataset contains a mixed microbial community rather than a single pure genomic isolate.</p>
-<p>The absence of ambiguous bases indicates that the assembler did not introduce unresolved nucleotide positions into the contigs.</p>
-</section>
-</section>
-<section id="read-mapping" class="level2">
-<h2 class="anchored" data-anchor-id="read-mapping">Read mapping</h2>
-<p>The quality-filtered paired-end reads were aligned back to the assembled contigs using <strong>BWA-MEM</strong>.</p>
-<p>The resulting alignment files were processed with <strong>SAMtools</strong> to inspect pairing information and insert-size statistics.</p>
-<section id="insert-size-distribution" class="level3">
-<h3 class="anchored" data-anchor-id="insert-size-distribution">Insert-size distribution</h3>
-<p>The mapped paired-end reads showed the following approximate insert-size statistics:</p>
-<ul>
-<li><strong>25th percentile:</strong> 304 bp</li>
-<li><strong>Median:</strong> 376 bp</li>
-<li><strong>75th percentile:</strong> 467 bp</li>
-<li><strong>Mean insert size:</strong> 389.8 bp</li>
-<li><strong>Standard deviation:</strong> 123.1 bp</li>
-</ul>
-<p>These values were broadly consistent with the expected fragment-size distribution of the sequencing library.</p>
-</section>
-<section id="interpretation-3" class="level3">
-<h3 class="anchored" data-anchor-id="interpretation-3">Interpretation</h3>
-<p>Mapping the reads back to the assembly provides an additional quality-control step by evaluating how well the assembled contigs represent the original sequencing data.</p>
-<p>The observed insert-size distribution was compatible with paired-end Illumina sequencing and did not indicate major abnormalities in library structure.</p>
-<p>Further mapping statistics, such as the percentage of mapped reads and properly paired reads, can be incorporated to obtain a more complete assessment of assembly support.</p>
-</section>
-</section>
-<section id="analysis-workflow" class="level2">
-<h2 class="anchored" data-anchor-id="analysis-workflow">Analysis workflow</h2>
-<pre class="text"><code>NCBI SRA
-    ↓
-Raw FASTQ files
-    ↓
-Quality Control
-FastQC + MultiQC
-    ↓
-Taxonomic Profiling
-Kraken2
-    ↓
-Read Trimming and Filtering
-fastp
-    ↓
-De novo Assembly
-metaSPAdes
-    ↓
-Assembly Quality Assessment
-QUAST
-    ↓
-Read Mapping
-BWA-MEM + SAMtools
-    ↓
-Downstream Genomic Analysis</code></pre>
-</section>
-<section id="tools-and-software" class="level2">
-<h2 class="anchored" data-anchor-id="tools-and-software">Tools and software</h2>
-<p>The analysis was performed using the following bioinformatics tools:</p>
-<ul>
-<li><strong>FastQC</strong> — quality assessment of raw sequencing reads</li>
-<li><strong>MultiQC</strong> — aggregation and visualization of quality control reports</li>
-<li><strong>Kraken2</strong> — taxonomic classification of sequencing reads</li>
-<li><strong>fastp</strong> — adapter trimming and quality filtering</li>
-<li><strong>metaSPAdes</strong> — de novo assembly of the sequencing dataset</li>
-<li><strong>QUAST</strong> — assessment of assembly quality</li>
-<li><strong>BWA-MEM</strong> — alignment of sequencing reads to the assembled contigs</li>
-<li><strong>SAMtools</strong> — processing and inspection of alignment files</li>
-</ul>
-</section>
-<section id="reproducibility" class="level2">
-<h2 class="anchored" data-anchor-id="reproducibility">Reproducibility</h2>
-<p>All major analysis steps, software versions, parameters and commands used in the workflow will be documented in this project.</p>
-<p>The complete analysis scripts will also be made available through GitHub.</p>
-</section>
-<section id="project-status" class="level2">
-<h2 class="anchored" data-anchor-id="project-status">Project status</h2>
-<p>The analysis is currently in progress. Results, figures and biological interpretation will be added progressively as each stage of the workflow is completed.</p>
-
-
-</section>
-
-</main> <!-- /main -->
+<div id="ref-jgiSAGGYP10" class="csl-entry" role="listitem">
+DOE Joint Genome Institute. 2023a. <em>Chroococcidiopsis Sp. SAG-GYP-10 Genome Project</em>. JGI Genome Portal. <a href="https://genome.jgi.doe.gov/portal/ChrspSAGGYP10/ChrspSAGGYP10.info.html">https://genome.jgi.doe.gov/portal/ChrspSAGGYP10/ChrspSAGGYP10.info.html</a>.
+</div>
+<div id="ref-jgiSAGGYP7" class="csl-entry" role="listitem">
+DOE Joint Genome Institute. 2023b. <em>Chroococcidiopsis Sp. SAG-GYP-7 Genome Project</em>. JGI Genome Portal. <a href="https://genome.jgi.doe.gov/portal/ChrspSAGGYP7/ChrspSAGGYP7.info.html">https://genome.jgi.doe.gov/portal/ChrspSAGGYP7/ChrspSAGGYP7.info.html</a>.
+</div>
+<div id="ref-parks2020taxonomy" class="csl-entry" role="listitem">
+Parks, Donovan H., Maria Chuvochina, Pierre-Alain Chaumeil, Christian Rinke, Aaron J. Mussig, and Philip Hugenholtz. 2020. <span>“A Complete Domain-to-Species Taxonomy for Bacteria and Archaea.”</span> <em>Nature Biotechnology</em> 38: 1079–86. <a href="https://doi.org/10.1038/s41587-020-0501-8">https://doi.org/10.1038/s41587-020-0501-8</a>.
+</div>
+<div id="ref-parks2022gtdb" class="csl-entry" role="listitem">
+Parks, Donovan H., Maria Chuvochina, Christian Rinke, Aaron J. Mussig, Pierre-Alain Chaumeil, and Philip Hugenholtz. 2022. <span>“GTDB: An Ongoing Census of Bacterial and Archaeal Diversity Through a Phylogenetically Consistent, Rank Normalized and Complete Genome-Based Taxonomy.”</span> <em>Nucleic Acids Research</em> 50 (D1): D785–94. <a href="https://doi.org/10.1093/nar/gkab776">https://doi.org/10.1093/nar/gkab776</a>.
+</div>
+<div id="ref-parks2018gtdb" class="csl-entry" role="listitem">
+Parks, Donovan H., Maria Chuvochina, David W. Waite, et al. 2018. <span>“A Standardized Bacterial Taxonomy Based on Genome Phylogeny Substantially Revises the Tree of Life.”</span> <em>Nature Biotechnology</em> 36: 996–1004. <a href="https://doi.org/10.1038/nbt.4229">https://doi.org/10.1038/nbt.4229</a>.
+</div>
+<div id="ref-rigano2026chroococcidiopsis" class="csl-entry" role="listitem">
+Rigano, Gabriele, and Daniela Billi. 2026. <span>“Comparative Genomics of Space-Resilient Chroococcidiopsis Cyanobacteria Reveals a Core Genetic Repertoire Supporting Extreme Tolerance Towards Desert and Non-Earth Conditions.”</span> <em>FEMS Microbes</em> 7: xtag036. <a href="https://doi.org/10.1093/femsmc/xtag036">https://doi.org/10.1093/femsmc/xtag036</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
